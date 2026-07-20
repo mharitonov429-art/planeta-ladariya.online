@@ -1,1 +1,30 @@
 
+name: Unzip Site Files
+
+on:
+  push:
+    paths:
+      - '**.zip' # Скрипт сработает, как только увидит zip-архив
+  workflow_dispatch: # Позволяет запустить распаковку вручную
+
+jobs:
+  unzip-process:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Unzip archive
+        run: |
+          # Находим любой zip-файл в корне и распаковываем его с заменой файлов
+          unzip -o *.zip
+          # Удаляем сам архив, чтобы он не занимал место
+          rm *.zip
+
+      - name: Commit and Push extracted files
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add .
+          git diff-index --quiet HEAD || git commit -m "Автоматическая распаковка архива"
+          git push
