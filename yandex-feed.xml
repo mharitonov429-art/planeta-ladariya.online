@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>Планета Ладария</title>
+    <link>https://planeta-ladariya.online/</link>
+    <description>Статьи и материалы сайта Планета Ладария</description>
+    <language>ru</language>
+    <item>
+      <title>Локальный ИИ: что это и почему нужен</title>
+      <link>https://planeta-ladariya.online/blog/lokalnyy-ii-chto-eto-i-pochemu-nuzhen.html</link>
+      <guid isPermaLink="true">https://planeta-ladariya.online/blog/lokalnyy-ii-chto-eto-i-pochemu-nuzhen.html</guid>
+    </item>
+    <item>
+      <title>Зачем бизнесу собственные навыки роботов</title>
+      <link>https://planeta-ladariya.online/blog/zachem-biznesu-sobstvennye-navyki-robotov.html</link>
+      <guid isPermaLink="true">https://planeta-ladariya.online/blog/zachem-biznesu-sobstvennye-navyki-robotov.html</guid>
+    </item>
+    <item>
+      <title>Обучение нейросетей: компьютерное зрение для роботов</title>
+      <link>https://planeta-ladariya.online/blog/obuchenie-neyrosetey-komputernoe-zrenie-dlya-robotov.html</link>
+      <guid isPermaLink="true">https://planeta-ladariya.online/blog/obuchenie-neyrosetey-komputernoe-zrenie-dlya-robotov.html</guid>
+    </item>
+    <item>
+      <title>Как часто обслуживать робота</title>
+      <link>https://planeta-ladariya.online/blog/kak-chasto-obsluzhivat-robota.html</link>
+      <guid isPermaLink="true">https://planeta-ladariya.online/blog/kak-chasto-obsluzhivat-robota.html</guid>
+    </item>
+    <item>
+      <title>Робособаки для охраны территории</title>
+      <link>https://planeta-ladariya.online/blog/robosobaki-dlya-okhrany-territorii.html</link>
+      <guid isPermaLink="true">https://planeta-ladariya.online/blog/robosobaki-dlya-okhrany-territorii.html</guid>
+    </item>
+    <item>
+      <title>Робот-администратор на ресепшене</title>
+      <link>https://planeta-ladariya.online/blog/robot-administrator-na-resepshene.html</link>
+      <guid isPermaLink="true">https://planeta-ladariya.online/blog/robot-administrator-na-resepshene.html</guid>
+    </item>
+    <item>
+      <title>Локальный ИИ для администрации района</title>
+      <link>https://planeta-ladariya.online/blog/lokalnyy-ii-dlya-administracii-rayona.html</link>
+      <guid isPermaLink="true">https://planeta-ladariya.online/blog/lokalnyy-ii-dlya-administracii-rayona.html</guid>
+    </item>
+  </channel>
+</rss>
