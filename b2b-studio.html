@@ -1,125 +1,272 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" class="scroll-smooth">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI-студия автоматизации бизнеса | Planeta Ladariya</title>
-    <script src="https://tailwindcss.com"></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
+<meta name="theme-color" content="#ffffff">
+<title>AI-студия автоматизации бизнеса | Planeta Ladariya</title>
+<meta name="description" content="Автономные ИИ-агенты и программные фабрики для коммерческого сектора: снижаем операционные затраты до 30%, локальные модели без облака.">
+<link rel="canonical" href="https://planeta-ladariya.online/b2b-studio.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="AI-студия автоматизации бизнеса | Planeta Ladariya">
+<meta property="og:description" content="Автономные ИИ-агенты и программные фабрики для коммерческого сектора: снижаем операционные затраты до 30%, локальные модели без облака.">
+<meta property="og:url" content="https://planeta-ladariya.online/b2b-studio.html">
+<meta property="og:locale" content="ru_RU">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700&display=swap">
+<script src="https://cdn.tailwindcss.com/3.4.17"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        fontFamily: { sans: ['"Golos Text"', 'ui-sans-serif', 'system-ui', '"Segoe UI"', 'Roboto', 'Arial', 'sans-serif'] },
+        colors: {
+          ink: '#12263A',
+          muted: '#51657A',
+          line: '#D6DEE6',
+          surface: '#F3F6F8',
+          brand: { DEFAULT: '#1D4F91', dark: '#173F74', soft: '#E6EEF8' },
+          bash: { DEFAULT: '#1B7F5C', dark: '#146347', soft: '#E3F2EC' }
+        }
+      }
+    }
+  }
+</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Главная", "item": "https://planeta-ladariya.online/"}, {"@type": "ListItem", "position": 2, "name": "Бизнесу", "item": "https://planeta-ladariya.online/b2b-studio.html"}]}</script>
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=112808220', 'ym');
+
+    ym(112808220, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/112808220" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
 </head>
-<body class="bg-slate-50 text-slate-900 font-sans antialiased">
 
-    <!-- Навигация -->
-    <header class="bg-white border-b border-slate-200 sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-            <a href="index.html" class="font-bold text-xl tracking-tight text-blue-900">Planeta Ladariya</a>
-            <nav class="hidden md:flex space-x-8">
-                <a href="b2g-government.html" class="text-slate-600 hover:text-blue-900 font-medium transition">Администрациям</a>
-                <a href="b2b-studio.html" class="text-blue-900 font-semibold border-b-2 border-blue-900 pb-1">Бизнесу</a>
-                <a href="calculator.html" class="text-slate-600 hover:text-blue-900 font-medium transition">Калькулятор</a>
-                <a href="blog/index.html" class="text-slate-600 hover:text-blue-900 font-medium transition">Блог</a>
-                <a href="contact.html" class="text-slate-600 hover:text-blue-900 font-medium transition">Контакты</a>
-            </nav>
-            <a href="contact.html" class="bg-blue-900 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-blue-800 transition shadow-sm">Заказать аудит</a>
+<body class="bg-white font-sans text-ink antialiased">
+<a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:left-3 focus:top-3 focus:z-50 focus:rounded-md focus:bg-white focus:px-4 focus:py-2 focus:text-brand focus:shadow">К основному содержимому</a>
+
+<!-- Шапка -->
+<header class="sticky top-0 z-40 border-b border-line bg-white/95 backdrop-blur">
+  <div class="mx-auto flex max-w-6xl items-center justify-between gap-4 px-5 py-3.5 sm:px-8">
+    <a href="index.html" class="text-lg font-bold tracking-tight text-ink">Planeta Ladariya</a>
+
+    <nav id="site-nav" aria-label="Основная навигация" class="hidden md:block">
+      <ul class="flex items-center gap-7 text-[15px] font-medium text-muted">
+        <li><a class="hover:text-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand" href="b2g-government.html">Администрациям</a></li>
+        <li><a aria-current="page" class="border-b-2 border-brand pb-1 text-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand" href="b2b-studio.html">Бизнесу</a></li>
+        <li><a class="hover:text-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand" href="calculator.html">Калькулятор</a></li>
+        <li><a class="hover:text-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand" href="blog/index.html">Блог</a></li>
+        <li><a class="hover:text-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand" href="contact.html">Контакты</a></li>
+      </ul>
+    </nav>
+
+    <a href="contact.html" class="hidden rounded-md bg-brand px-4 py-2.5 text-[15px] font-semibold text-white hover:bg-brand-dark focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand md:inline-flex">Заказать аудит</a>
+
+    <button id="menu-btn" type="button" aria-expanded="false" aria-controls="mobile-nav" class="rounded-md border border-line px-3.5 py-2 text-[15px] font-medium text-ink md:hidden">Меню</button>
+  </div>
+  <nav id="mobile-nav" aria-label="Мобильная навигация" class="hidden border-t border-line bg-white md:hidden">
+    <ul class="mx-auto max-w-6xl px-5 py-2 text-base font-medium sm:px-8">
+      <li><a class="block py-3" href="b2g-government.html">Администрациям</a></li>
+      <li><a class="block py-3" href="b2b-studio.html">Бизнесу</a></li>
+      <li><a class="block py-3" href="calculator.html">Калькулятор</a></li>
+      <li><a class="block py-3" href="blog/index.html">Блог</a></li>
+      <li><a class="block py-3" href="contact.html">Контакты</a></li>
+      <li><a class="my-2 block rounded-md bg-brand px-4 py-3 text-center font-semibold text-white" href="contact.html">Заказать аудит</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="main">
+
+  <!-- Первый экран (Hero) -->
+  <section class="border-b border-line bg-surface">
+    <div class="mx-auto max-w-6xl px-5 py-14 sm:px-8 md:py-20">
+      <div class="text-center">
+        <span class="inline-block rounded-full bg-brand-soft px-3 py-1 text-sm font-semibold uppercase tracking-wider text-brand">Экс-Genivai</span>
+        <h1 class="mx-auto mt-4 max-w-4xl text-4xl font-bold leading-[1.1] tracking-tight text-ink sm:text-5xl">
+          Автономные ИИ-агенты и программные фабрики для коммерческого сектора
+        </h1>
+        <p class="mx-auto mt-6 max-w-3xl text-xl leading-relaxed text-muted">
+          Снижаем операционные затраты бизнеса до 30%. Развертываем мощные открытые модели локально в вашем контуре. Никаких подписок на зарубежные облака и рисков утечки данных.
+        </p>
+        <div class="mt-10 flex flex-wrap justify-center gap-4">
+          <a href="#solutions" class="inline-flex rounded-md bg-brand px-6 py-3 font-semibold text-white hover:bg-brand-dark focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand">Каталог решений под ключ</a>
+          <a href="calculator.html" class="inline-flex rounded-md border border-line bg-white px-6 py-3 font-semibold text-ink hover:border-muted focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand">Рассчитать экономию на ФОТ</a>
         </div>
-    </header>
+      </div>
+    </div>
+  </section>
 
-    <!-- Первый экран (Hero) -->
-    <section class="py-20 bg-gradient-to-b from-blue-50 to-slate-50">
-        <div class="max-w-5xl mx-auto px-4 text-center">
-            <span class="text-blue-800 font-semibold text-sm uppercase tracking-wider bg-blue-100 px-3 py-1 rounded-full">Экс-Genivai</span>
-            <h1 class="mt-4 text-4xl sm:text-5xl font-extrabold tracking-tight text-slate-900">
-                Автономные ИИ-агенты и программные фабрики для коммерческого сектора
-            </h1>
-            <p class="mt-6 text-xl text-slate-600 max-w-3xl mx-auto">
-                Снижаем операционные затраты бизнеса до 30%. Развертываем мощные открытые модели локально в вашем контуре. Никаких подписок на зарубежные облака и рисков утечки данных.
-            </p>
-            <div class="mt-10 flex flex-wrap justify-center gap-4">
-                <a href="#solutions" class="bg-blue-900 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-800 transition shadow">Каталог решений под ключ</a>
-                <a href="calculator.html" class="bg-white text-slate-700 border border-slate-300 px-6 py-3 rounded-lg font-medium hover:bg-slate-50 transition">Рассчитать экономию на ФОТ</a>
-            </div>
+  <!-- Блок технологического суверенитета -->
+  <section>
+    <div class="mx-auto max-w-6xl px-5 py-16 sm:px-8 md:py-20">
+      <div class="lg:text-center">
+        <h2 class="text-base font-semibold uppercase tracking-wide text-brand">Безопасность и независимость</h2>
+        <p class="mt-2 text-3xl font-bold tracking-tight text-ink sm:text-4xl">Почему облачный ИИ больше не подходит для бизнеса</p>
+      </div>
+      <div class="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        <div class="rounded-xl border border-line bg-surface p-6">
+          <div class="mb-2 text-lg font-bold text-brand">Локальный контур</div>
+          <p class="text-sm leading-relaxed text-muted">Мы не перепродаём доступ к API зарубежных систем. Модели (DeepSeek V4 Pro, Qwen) разворачиваются на ваших мощностях или серверах нашего ИТ-центра в с. Месягутово.</p>
         </div>
-    </section>
-
-    <!-- Блок технологического суверенитета -->
-    <section class="py-16 bg-white border-y border-slate-200">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="lg:text-center">
-                <h2 class="text-base text-blue-900 font-semibold tracking-wide uppercase">Безопасность и независимость</h2>
-                <p class="mt-2 text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">Почему облачный ИИ больше не подходит для бизнеса</p>
-            </div>
-            <div class="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
-                <div class="bg-slate-50 p-6 rounded-xl border border-slate-100">
-                    <div class="text-blue-900 font-bold text-lg mb-2">Локальный контур</div>
-                    <p class="text-slate-600 text-sm leading-relaxed">Мы не перепродаем доступ к API зарубежных систем. Модели (DeepSeek V4 Pro, Qwen) разворачиваются на ваших мощностях или серверах нашего ИТ-центра в с. Месягутово.</p>
-                </div>
-                <div class="bg-slate-50 p-6 rounded-xl border border-slate-100">
-                    <div class="text-blue-900 font-bold text-lg mb-2">Защита коммерческой тайны</div>
-                    <p class="text-slate-600 text-sm leading-relaxed">Ваши клиентские базы, финансовые отчеты и регламенты никогда не покинут периметр компании. Полное соответствие требованиям ФЗ-152 о персональных данных.</p>
-                </div>
-                <div class="bg-slate-50 p-6 rounded-xl border border-slate-100">
-                    <div class="text-blue-900 font-bold text-lg mb-2">Финансовая стабильность</div>
-                    <p class="text-slate-600 text-sm leading-relaxed">Рынок коммерческих облаков перегружен, инфраструктура бигтехов генерирует миллиардные убытки. Локальное внедрение защищает вас от внезапных блокировок и роста цен.</p>
-                </div>
-            </div>
+        <div class="rounded-xl border border-line bg-surface p-6">
+          <div class="mb-2 text-lg font-bold text-brand">Защита коммерческой тайны</div>
+          <p class="text-sm leading-relaxed text-muted">Ваши клиентские базы, финансовые отчёты и регламенты никогда не покинут периметр компании. Полное соответствие требованиям ФЗ-152 о персональных данных.</p>
         </div>
-    </section>
-
-    <!-- Каталог решений -->
-    <section id="solutions" class="py-20 bg-slate-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-16">
-                <h2 class="text-3xl font-bold tracking-tight text-slate-900">Каталог готовых решений под ключ</h2>
-                <p class="mt-4 text-lg text-slate-600">Мы не пишем простые промпты — мы настраиваем программные фабрики, которые полностью заменяют рутинные операции.</p>
-            </div>
-
-            <div class="space-y-12">
-                <!-- Кейс 1 -->
-                <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
-                    <div class="max-w-2xl">
-                        <span class="text-xs font-bold text-blue-900 tracking-wider uppercase bg-blue-50 px-2.5 py-1 rounded">Кейс 1: Обучение и Кадры</span>
-                        <h3 class="text-2xl font-bold text-slate-900 mt-2">Корпоративный AI-чат по базам знаний</h3>
-                        <p class="text-slate-600 mt-2">Интеллектуальная RAG-система для сотрудников. Мгновенно ищет ответы в регламентах, инструкциях, должностных картах и архивах компании.</p>
-                        <div class="mt-4 flex flex-wrap gap-4 text-sm font-semibold text-slate-700">
-                            <span class="bg-emerald-50 text-emerald-800 px-3 py-1 rounded">Ускорение поиска информации на 70%</span>
-                            <span class="bg-emerald-50 text-emerald-800 px-3 py-1 rounded">Снижение нагрузки на наставников на 50%</span>
-                        </div>
-                    </div>
-                    <a href="contact.html?solution=hr" class="w-full md:w-auto text-center bg-blue-900 text-white px-5 py-3 rounded-lg text-sm font-medium hover:bg-blue-800 transition whitespace-nowrap">Внедрить в компании</a>
-                </div>
-
-                <!-- Кейс 2 -->
-                <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
-                    <div class="max-w-2xl">
-                        <span class="text-xs font-bold text-blue-900 tracking-wider uppercase bg-blue-50 px-2.5 py-1 rounded">Кейс 2: Продажи и Лидогенерация</span>
-                        <h3 class="text-2xl font-bold text-slate-900 mt-2">Круглосуточный AI-консультант (Telegram / VK)</h3>
-                        <p class="text-slate-600 mt-2">Автономный агент ведет клиентов по воронке продаж 24/7. Отвечает на сложные вопросы о продукте, обрабатывает возражения и автоматически передает квалифицированные лиды в CRM.</p>
-                        <div class="mt-4 flex flex-wrap gap-4 text-sm font-semibold text-slate-700">
-                            <span class="bg-emerald-50 text-emerald-800 px-3 py-1 rounded">Автоматизация до 80% входящих заявок</span>
-                            <span class="bg-emerald-50 text-emerald-800 px-3 py-1 rounded">Рост конверсии на 10–25%</span>
-                        </div>
-                    </div>
-                    <a href="contact.html?solution=sales" class="w-full md:w-auto text-center bg-blue-900 text-white px-5 py-3 rounded-lg text-sm font-medium hover:bg-blue-800 transition whitespace-nowrap">Подключить каналы</a>
-                </div>
-
-                <!-- Кейс 3 -->
-                <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
-                    <div class="max-w-2xl">
-                        <span class="text-xs font-bold text-blue-900 tracking-wider uppercase bg-blue-50 px-2.5 py-1 rounded">Кейс 3: Администрирование</span>
-                        <h3 class="text-2xl font-bold text-slate-900 mt-2">Умный ИИ-секретарь для записи и расписаний</h3>
-                        <p class="text-slate-600 mt-2">Автоматическое управление календарем компании, бронированием переговорных, записью клиентов на услуги через мессенджеры без участия человека.</p>
-                        <div class="mt-4 flex flex-wrap gap-4 text-sm font-semibold text-slate-700">
-                            <span class="bg-emerald-50 text-emerald-800 px-3 py-1 rounded">До 90% записей без ошибок сотрудников</span>
-                            <span class="bg-emerald-50 text-emerald-800 px-3 py-1 rounded">Освобождение до 20 часов работы в неделю</span>
-                        </div>
-                    </div>
-                    <a href="contact.html?solution=admin" class="w-full md:w-auto text-center bg-blue-900 text-white px-5 py-3 rounded-lg text-sm font-medium hover:bg-blue-800 transition whitespace-nowrap">Узнать стоимость</a>
-                </div>
-            </div>
+        <div class="rounded-xl border border-line bg-surface p-6">
+          <div class="mb-2 text-lg font-bold text-brand">Финансовая стабильность</div>
+          <p class="text-sm leading-relaxed text-muted">Рынок коммерческих облаков перегружен, инфраструктура бигтехов генерирует миллиардные убытки. Локальное внедрение защищает вас от внезапных блокировок и роста цен.</p>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- Лид-магнит / Призыв к действию -->
-    <section class="py-16 bg-blue-900 text-white">
-        <div class="max-w-4xl mx-auto px-4 text-center">
-            <h2 class="text-3xl font-bold">Индивидуальный разбор бизнес-процессов</h2>
-            <p class="mt-4 text-lg text-blue-100">
+  <!-- Каталог решений -->
+  <section id="solutions" class="scroll-mt-20 border-y border-line bg-surface">
+    <div class="mx-auto max-w-6xl px-5 py-16 sm:px-8 md:py-20">
+      <div class="mx-auto mb-16 max-w-3xl text-center">
+        <h2 class="text-3xl font-bold tracking-tight text-ink">Каталог готовых решений под ключ</h2>
+        <p class="mt-4 text-lg leading-relaxed text-muted">Мы не пишем простые промпты — мы настраиваем программные фабрики, которые полностью заменяют рутинные операции.</p>
+      </div>
+
+      <div class="space-y-12">
+        <!-- Кейс 1 -->
+        <div class="flex flex-col justify-between gap-6 rounded-2xl border border-line bg-white p-8 shadow-sm md:flex-row md:items-center">
+          <div class="max-w-2xl">
+            <span class="inline-block rounded bg-brand-soft px-2.5 py-1 text-xs font-bold uppercase tracking-wider text-brand">Кейс 1: Обучение и Кадры</span>
+            <h3 class="mt-2 text-2xl font-bold text-ink">Корпоративный AI-чат по базам знаний</h3>
+            <p class="mt-2 text-muted">Интеллектуальная RAG-система для сотрудников. Мгновенно ищет ответы в регламентах, инструкциях, должностных картах и архивах компании.</p>
+            <div class="mt-4 flex flex-wrap gap-4 text-sm font-semibold text-muted">
+              <span class="rounded bg-bash-soft px-3 py-1 text-bash">Ускорение поиска информации на 70%</span>
+              <span class="rounded bg-bash-soft px-3 py-1 text-bash">Снижение нагрузки на наставников на 50%</span>
+            </div>
+          </div>
+          <a href="contact.html?solution=hr" class="w-full whitespace-nowrap rounded-lg bg-brand px-5 py-3 text-center text-sm font-medium text-white hover:bg-brand-dark focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand md:w-auto">Внедрить в компании</a>
+        </div>
+
+        <!-- Кейс 2 -->
+        <div class="flex flex-col justify-between gap-6 rounded-2xl border border-line bg-white p-8 shadow-sm md:flex-row md:items-center">
+          <div class="max-w-2xl">
+            <span class="inline-block rounded bg-brand-soft px-2.5 py-1 text-xs font-bold uppercase tracking-wider text-brand">Кейс 2: Продажи и Лидогенерация</span>
+            <h3 class="mt-2 text-2xl font-bold text-ink">Круглосуточный AI-консультант (Telegram / VK)</h3>
+            <p class="mt-2 text-muted">Автономный агент ведёт клиентов по воронке продаж 24/7. Отвечает на сложные вопросы о продукте, обрабатывает возражения и автоматически передаёт квалифицированные лиды в CRM.</p>
+            <div class="mt-4 flex flex-wrap gap-4 text-sm font-semibold text-muted">
+              <span class="rounded bg-bash-soft px-3 py-1 text-bash">Автоматизация до 80% входящих заявок</span>
+              <span class="rounded bg-bash-soft px-3 py-1 text-bash">Рост конверсии на 10–25%</span>
+            </div>
+          </div>
+          <a href="contact.html?solution=sales" class="w-full whitespace-nowrap rounded-lg bg-brand px-5 py-3 text-center text-sm font-medium text-white hover:bg-brand-dark focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand md:w-auto">Подключить каналы</a>
+        </div>
+
+        <!-- Кейс 3 -->
+        <div class="flex flex-col justify-between gap-6 rounded-2xl border border-line bg-white p-8 shadow-sm md:flex-row md:items-center">
+          <div class="max-w-2xl">
+            <span class="inline-block rounded bg-brand-soft px-2.5 py-1 text-xs font-bold uppercase tracking-wider text-brand">Кейс 3: Администрирование</span>
+            <h3 class="mt-2 text-2xl font-bold text-ink">Умный ИИ-секретарь для записи и расписаний</h3>
+            <p class="mt-2 text-muted">Автоматическое управление календарём компании, бронированием переговорных, записью клиентов на услуги через мессенджеры без участия человека.</p>
+            <div class="mt-4 flex flex-wrap gap-4 text-sm font-semibold text-muted">
+              <span class="rounded bg-bash-soft px-3 py-1 text-bash">До 90% записей без ошибок сотрудников</span>
+              <span class="rounded bg-bash-soft px-3 py-1 text-bash">Освобождение до 20 часов работы в неделю</span>
+            </div>
+          </div>
+          <a href="contact.html?solution=admin" class="w-full whitespace-nowrap rounded-lg bg-brand px-5 py-3 text-center text-sm font-medium text-white hover:bg-brand-dark focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand md:w-auto">Узнать стоимость</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Лид-магнит / Призыв к действию -->
+  <section>
+    <div class="mx-auto max-w-4xl px-5 py-16 sm:px-8 md:py-20">
+      <div class="text-center">
+        <h2 class="text-3xl font-bold tracking-tight text-ink">Индивидуальный разбор бизнес-процессов</h2>
+        <p class="mx-auto mt-4 max-w-2xl text-lg leading-relaxed text-muted">
+          45 минут с Матвеем Харитоновым: проверим допущения на ваших процессах и документах и подскажем, с какого сценария начать пилот.
+        </p>
+        <p class="mx-auto mt-4 max-w-2xl text-[15px] text-muted">
+          Для оценки экономии используйте <a href="calculator.html" class="font-medium text-brand underline underline-offset-2 hover:text-brand-dark">калькулятор на 50 сотрудников</a>: высвобождается до 13,6 млн ₽ ФОТ в год и 15 160 часов (эквивалент 9 ставок).
+        </p>
+        <a href="contact.html" class="mt-8 inline-flex rounded-md bg-brand px-6 py-3.5 font-semibold text-white hover:bg-brand-dark focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand">Записаться на разбор</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Преимущества локального ИИ -->
+  <section class="border-y border-line bg-surface">
+    <div class="mx-auto max-w-6xl px-5 py-16 sm:px-8 md:py-20">
+      <h2 class="text-3xl font-bold tracking-tight text-ink">Почему локальный ИИ выгоднее облака</h2>
+      <div class="mt-10 grid gap-8 md:grid-cols-2">
+        <div class="border-l-4 border-brand pl-5">
+          <h3 class="text-lg font-bold text-ink">Предсказуемая стоимость владения</h3>
+          <p class="mt-2 leading-relaxed text-muted">Единоразовая установка и фиксированное сопровождение. Нет риска роста тарифов облачных провайдеров и зависимости от курса валют.</p>
+        </div>
+        <div class="border-l-4 border-brand pl-5">
+          <h3 class="text-lg font-bold text-ink">Работа при нестабильной связи</h3>
+          <p class="mt-2 leading-relaxed text-muted">Система работает при сбоях интернета. Для компаний в отдалённых районах и при высоких требованиях к отказоустойчивости это критично.</p>
+        </div>
+        <div class="border-l-4 border-brand pl-5">
+          <h3 class="text-lg font-bold text-ink">Без ограничений по запросам</h3>
+          <p class="mt-2 leading-relaxed text-muted">Облачные API часто лимитируют число обращений. Локальная модель обрабатывает столько запросов, сколько позволяет ваше оборудование.</p>
+        </div>
+        <div class="border-l-4 border-brand pl-5">
+          <h3 class="text-lg font-bold text-ink">Настройка под вашу специфику</h3>
+          <p class="mt-2 leading-relaxed text-muted">Мы дообучаем модель на ваших данных и терминологии отрасли. Облачные сервисы такой гибкости не дают.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Контакты -->
+  <section id="kontakty" class="scroll-mt-20">
+    <div class="mx-auto grid max-w-6xl gap-10 px-5 py-16 sm:px-8 md:grid-cols-2 md:py-20">
+      <div>
+        <h2 class="text-3xl font-bold tracking-tight text-ink">Покажем на ваших процессах</h2>
+        <p class="mt-4 max-w-md text-[17px] leading-relaxed text-muted">Разбор занимает 45 минут, лично или онлайн. Вы рассказываете о процессах, мы предлагаем сценарий автоматизации и называем ориентир по стоимости.</p>
+        <a href="contact.html" class="mt-6 inline-flex rounded-md bg-brand px-5 py-3 font-semibold text-white hover:bg-brand-dark focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand">Записаться на разбор</a>
+      </div>
+      <address class="not-italic">
+        <p class="text-xl font-bold text-ink">Матвей Харитонов</p>
+        <p class="mt-2 text-[17px] text-muted">с. Месягутово, Дуванский район, Республика Башкортостан</p>
+        <p class="mt-4 text-[17px]"><a class="font-semibold text-brand hover:text-brand-dark" href="tel:+79177464295">+7 917 746-42-95</a></p>
+        <p class="mt-1 text-[17px]"><a class="font-semibold text-brand hover:text-brand-dark" href="mailto:zames.78@mail.ru">zames.78@mail.ru</a></p>
+      </address>
+    </div>
+  </section>
+
+</main>
+
+<footer class="border-t border-line bg-surface">
+  <div class="mx-auto flex max-w-6xl flex-col gap-4 px-5 py-8 text-[15px] text-muted sm:px-8 md:flex-row md:items-center md:justify-between">
+    <p>© Planeta Ladariya, Матвей Харитонов, с. Месягутово</p>
+    <p class="flex flex-wrap gap-x-6 gap-y-1">
+      <a class="hover:text-ink" href="tel:+79177464295">+7 917 746-42-95</a>
+      <a class="hover:text-ink" href="mailto:zames.78@mail.ru">zames.78@mail.ru</a>
+      <a class="hover:text-ink" href="blog/index.html">Блог</a>
+    </p>
+  </div>
+</footer>
+
+<script>
+  (function () {
+    var btn = document.getElementById('menu-btn');
+    var nav = document.getElementById('mobile-nav');
+    if (!btn || !nav) return;
+    btn.addEventListener('click', function () {
+      var open = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', String(!open));
+      nav.classList.toggle('hidden');
+    });
+  })();
+</script>
+</body>
+</html>
