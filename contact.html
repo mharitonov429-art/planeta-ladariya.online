@@ -1,8 +1,10 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" class="scroll-smooth">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
+<meta name="theme-color" content="#ffffff">
 <title>Контакты и заявка на демонстрацию | Planeta Ladariya</title>
 <meta name="description" content="Контакты Planeta Ladariya в с. Месягутово: заявка на демонстрацию ИИ-справочника для администрации или на разбор процессов для бизнеса.">
 <link rel="canonical" href="https://planeta-ladariya.online/contact.html">
@@ -11,10 +13,30 @@
 <meta property="og:description" content="Контакты Planeta Ladariya в с. Месягутово: заявка на демонстрацию ИИ-справочника для администрации или на разбор процессов для бизнеса.">
 <meta property="og:url" content="https://planeta-ladariya.online/contact.html">
 <meta property="og:locale" content="ru_RU">
-<meta name="theme-color" content="#F1F3EE">
-<link rel="stylesheet" href="assets/css/site.css">
-<link rel="stylesheet" href="assets/css/portal.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700&display=swap">
+<script src="https://cdn.tailwindcss.com/3.4.17"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        fontFamily: { sans: ['"Golos Text"', 'ui-sans-serif', 'system-ui', '"Segoe UI"', 'Roboto', 'Arial', 'sans-serif'] },
+        colors: {
+          ink: '#12263A',
+          muted: '#51657A',
+          line: '#D6DEE6',
+          surface: '#F3F6F8',
+          brand: { DEFAULT: '#1D4F91', dark: '#173F74', soft: '#E6EEF8' },
+          bash: { DEFAULT: '#1B7F5C', dark: '#146347', soft: '#E3F2EC' }
+        }
+      }
+    }
+  }
+</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Главная", "item": "https://planeta-ladariya.online/"}, {"@type": "ListItem", "position": 2, "name": "Контакты", "item": "https://planeta-ladariya.online/contact.html"}]}</script>
+
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript">
     (function(m,e,t,r,i,k,a){
@@ -29,73 +51,265 @@
 <noscript><div><img src="https://mc.yandex.ru/watch/112808220" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 <!-- /Yandex.Metrika counter -->
 </head>
-<body>
 
-<header class="top">
-  <div class="wrap">
-    <a class="brand" href="index.html">Planeta Ladariya</a>
-    <nav aria-label="Основная навигация">
-      <a href="b2g-government.html">Администрациям</a><a href="b2b-studio.html">Бизнесу</a><a href="calculator.html">Калькулятор</a><a href="blog/index.html">Блог</a><a href="contact.html" aria-current="page">Контакты</a>
+<body class="bg-white font-sans text-ink antialiased">
+<a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:left-3 focus:top-3 focus:z-50 focus:rounded-md focus:bg-white focus:px-4 focus:py-2 focus:text-brand focus:shadow">К основному содержимому</a>
+
+<!-- Шапка -->
+<header class="sticky top-0 z-40 border-b border-line bg-white/95 backdrop-blur">
+  <div class="mx-auto flex max-w-6xl items-center justify-between gap-4 px-5 py-3.5 sm:px-8">
+    <a href="index.html" class="text-lg font-bold tracking-tight text-ink">Planeta Ladariya</a>
+
+    <nav id="site-nav" aria-label="Основная навигация" class="hidden md:block">
+      <ul class="flex items-center gap-7 text-[15px] font-medium text-muted">
+        <li><a class="hover:text-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand" href="b2g-government.html">Администрациям</a></li>
+        <li><a class="hover:text-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand" href="b2b-studio.html">Бизнесу</a></li>
+        <li><a class="hover:text-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand" href="calculator.html">Калькулятор</a></li>
+        <li><a class="hover:text-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand" href="blog/index.html">Блог</a></li>
+        <li><a aria-current="page" class="border-b-2 border-brand pb-1 text-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand" href="contact.html">Контакты</a></li>
+      </ul>
     </nav>
+
+    <a href="#form" class="hidden rounded-md bg-brand px-4 py-2.5 text-[15px] font-semibold text-white hover:bg-brand-dark focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand md:inline-flex">Оставить заявку</a>
+
+    <button id="menu-btn" type="button" aria-expanded="false" aria-controls="mobile-nav" class="rounded-md border border-line px-3.5 py-2 text-[15px] font-medium text-ink md:hidden">Меню</button>
   </div>
+  <nav id="mobile-nav" aria-label="Мобильная навигация" class="hidden border-t border-line bg-white md:hidden">
+    <ul class="mx-auto max-w-6xl px-5 py-2 text-base font-medium sm:px-8">
+      <li><a class="block py-3" href="b2g-government.html">Администрациям</a></li>
+      <li><a class="block py-3" href="b2b-studio.html">Бизнесу</a></li>
+      <li><a class="block py-3" href="calculator.html">Калькулятор</a></li>
+      <li><a class="block py-3" href="blog/index.html">Блог</a></li>
+      <li><a class="block py-3" href="contact.html">Контакты</a></li>
+      <li><a class="my-2 block rounded-md bg-brand px-4 py-3 text-center font-semibold text-white" href="#form">Оставить заявку</a></li>
+    </ul>
+  </nav>
 </header>
 
-<main>
-  <div class="wrap">
+<main id="main">
 
-    <section class="hero">
-      <h1>Контакты и заявка на демонстрацию</h1>
-      <p class="lead">Расскажите о задаче, и мы предложим формат: демонстрация на ваших документах для администрации или разбор процессов для бизнеса.</p>
-    </section>
+  <!-- Первый экран -->
+  <section class="border-b border-line bg-surface">
+    <div class="mx-auto max-w-6xl px-5 py-12 sm:px-8 md:py-16">
+      <h1 class="max-w-3xl text-4xl font-bold leading-[1.1] tracking-tight text-ink sm:text-5xl">Контакты и заявка на демонстрацию</h1>
+      <p class="mt-5 max-w-2xl text-lg leading-relaxed text-muted">Расскажите о задаче, и мы предложим формат: демонстрация на ваших документах для администрации или разбор процессов для бизнеса. Демонстрация занимает 30–45 минут, лично или онлайн.</p>
+    </div>
+  </section>
 
-    <section class="section">
-      <div class="grid two">
-        <div class="card">
-          <h2>Связаться напрямую</h2>
-          <p><strong>Матвей Харитонов</strong><br>с. Месягутово, Дуванский район, Республика Башкортостан</p>
-          <p><a href="tel:+79177464295">+7 917 746-42-95</a><br><a href="mailto:zames.78@mail.ru">zames.78@mail.ru</a></p>
-          <p class="fine">Демонстрация занимает 30–45 минут, лично или онлайн.</p>
+  <!-- Контакты и форма -->
+  <section class="mx-auto max-w-6xl px-5 py-14 sm:px-8 md:py-20">
+    <div class="grid gap-10 lg:grid-cols-[0.85fr_1.15fr]">
+
+      <!-- Левая колонка: прямые контакты -->
+      <div class="space-y-8">
+        <div>
+          <h2 class="text-2xl font-bold tracking-tight text-ink">Связаться напрямую</h2>
+          <address class="mt-5 not-italic">
+            <p class="text-xl font-bold text-ink">Матвей Харитонов</p>
+            <p class="mt-2 text-[17px] text-muted">с. Месягутово, Дуванский район, Республика Башкортостан</p>
+            <p class="mt-4 text-[17px]"><a class="font-semibold text-brand hover:text-brand-dark" href="tel:+79177464295">+7 917 746-42-95</a></p>
+            <p class="mt-1 text-[17px]"><a class="font-semibold text-brand hover:text-brand-dark" href="mailto:zames.78@mail.ru">zames.78@mail.ru</a></p>
+          </address>
         </div>
-        <form class="card form-grid" id="lead-form" method="post" action="https://formspree.io/f/mvkojkgp">
-          <h2>Оставить заявку</h2>
-          <label>Имя<input type="text" name="name" autocomplete="name" required></label>
-          <label>Email<input type="email" name="email" autocomplete="email" required></label>
-          <label>Телефон (необязательно)<input type="tel" name="phone" autocomplete="tel"></label>
-          <label>Кто вы
-            <select name="type">
+
+        <div class="rounded-xl border border-line bg-surface p-6">
+          <h3 class="text-lg font-bold text-ink">Что будет после заявки</h3>
+          <ol class="mt-3 space-y-2 text-[15px] leading-relaxed text-muted">
+            <li>1. Свяжемся в течение рабочего дня и уточним задачу.</li>
+            <li>2. Согласуем время демонстрации или разбора процессов.</li>
+            <li>3. На встрече покажем ответы на ваших документах.</li>
+          </ol>
+        </div>
+
+        <div class="rounded-xl border border-line p-6">
+          <h3 class="text-lg font-bold text-ink">Где мы работаем</h3>
+          <p class="mt-2 text-[15px] leading-relaxed text-muted">Локальный ИИ-узел развёрнут в с. Месягутово, Дуванский район. Работаем с администрациями, МУП, ЖКХ, школами и коммерческими организациями северо-востока Башкортостана.</p>
+        </div>
+
+        <div class="rounded-xl border border-bash bg-bash-soft p-6">
+          <h3 class="text-lg font-bold text-ink">Не знаете, с чего начать?</h3>
+          <p class="mt-2 text-[15px] leading-relaxed text-ink">Рассчитайте ориентир экономии в <a class="font-semibold text-brand underline underline-offset-2 hover:text-brand-dark" href="calculator.html">калькуляторе</a> — это займёт минуту и поможет понять порядок цифр.</p>
+        </div>
+      </div>
+
+      <!-- Правая колонка: форма -->
+      <form id="form" class="scroll-mt-20 rounded-xl border border-line bg-white p-6 shadow-sm sm:p-8" method="post" action="https://formspree.io/f/mvkojkgp" novalidate>
+        <h2 class="text-2xl font-bold tracking-tight text-ink">Оставить заявку</h2>
+        <p class="mt-2 text-[15px] text-muted">Все поля, отмеченные <span class="text-brand">*</span>, обязательны.</p>
+
+        <div class="mt-6 grid gap-5">
+          <div>
+            <label for="f-name" class="block text-[15px] font-semibold text-ink">Имя <span class="text-brand">*</span></label>
+            <input id="f-name" name="name" type="text" autocomplete="name" required class="mt-1.5 w-full rounded-md border border-slate-300 bg-white px-3 py-2.5 text-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand">
+            <p class="err mt-1 hidden text-sm text-red-600" data-for="f-name"></p>
+          </div>
+
+          <div class="grid gap-5 sm:grid-cols-2">
+            <div>
+              <label for="f-email" class="block text-[15px] font-semibold text-ink">Электронная почта <span class="text-brand">*</span></label>
+              <input id="f-email" name="email" type="email" autocomplete="email" required class="mt-1.5 w-full rounded-md border border-slate-300 bg-white px-3 py-2.5 text-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand">
+              <p class="err mt-1 hidden text-sm text-red-600" data-for="f-email"></p>
+            </div>
+            <div>
+              <label for="f-phone" class="block text-[15px] font-semibold text-ink">Телефон</label>
+              <input id="f-phone" name="phone" type="tel" autocomplete="tel" placeholder="+7" class="mt-1.5 w-full rounded-md border border-slate-300 bg-white px-3 py-2.5 text-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand">
+            </div>
+          </div>
+
+          <div>
+            <label for="f-type" class="block text-[15px] font-semibold text-ink">Кто вы</label>
+            <select id="f-type" name="type" class="mt-1.5 w-full rounded-md border border-slate-300 bg-white px-3 py-2.5 text-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand">
               <option>Администрация, МУП, ЖКХ</option>
               <option>Школа, колледж, клиника, дом культуры</option>
               <option>Коммерческая организация</option>
               <option>Другое</option>
             </select>
+          </div>
+
+          <div>
+            <label for="f-message" class="block text-[15px] font-semibold text-ink">Сообщение</label>
+            <textarea id="f-message" name="message" rows="6" placeholder="Какая задача, сколько документов или сотрудников" class="mt-1.5 w-full rounded-md border border-slate-300 bg-white px-3 py-2.5 text-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand"></textarea>
+          </div>
+
+          <!-- Скрытые поля для запроса из калькулятора -->
+          <input id="calc-summary" name="calc_summary" type="hidden" value="">
+          <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" class="hidden" aria-hidden="true">
+
+          <label class="flex items-start gap-2 text-[15px] text-ink">
+            <input id="f-consent" type="checkbox" name="consent" value="yes" required class="mt-1 accent-brand">
+            <span>Согласен на обработку персональных данных для ответа на заявку <span class="text-brand">*</span></span>
           </label>
-          <label>Сообщение<textarea name="message" id="message" rows="6" placeholder="Какая задача, сколько документов или сотрудников"></textarea></label>
-          <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="display:none">
-          <label class="check"><input type="checkbox" name="consent" value="yes" required> Согласен на обработку персональных данных для ответа на заявку</label>
-          <button class="btn primary" type="submit">Отправить заявку</button>
-        </form>
-      </div>
-    </section>
-  </div>
+          <p class="err hidden text-sm text-red-600" data-for="f-consent"></p>
+
+          <button id="submit-btn" type="submit" class="rounded-md bg-brand px-5 py-3 font-semibold text-white hover:bg-brand-dark focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand disabled:opacity-60">Отправить заявку</button>
+          <p id="form-status" role="status" aria-live="polite" class="text-[15px] text-ink"></p>
+        </div>
+      </form>
+
+    </div>
+  </section>
+
 </main>
 
-<footer>
-  <div class="wrap">
-    <span>© Planeta Ladariya · Матвей Харитонов · с. Месягутово, Дуванский район, Республика Башкортостан</span>
-    <a href="tel:+79177464295">+7 917 746-42-95</a>
-    <a href="mailto:zames.78@mail.ru">zames.78@mail.ru</a>
-    <a href="blog/index.html">Блог</a>
+<footer class="border-t border-line bg-surface">
+  <div class="mx-auto flex max-w-6xl flex-col gap-4 px-5 py-8 text-[15px] text-muted sm:px-8 md:flex-row md:items-center md:justify-between">
+    <p>© Planeta Ladariya, Матвей Харитонов, с. Месягутово</p>
+    <p class="flex flex-wrap gap-x-6 gap-y-1">
+      <a class="hover:text-ink" href="tel:+79177464295">+7 917 746-42-95</a>
+      <a class="hover:text-ink" href="mailto:zames.78@mail.ru">zames.78@mail.ru</a>
+      <a class="hover:text-ink" href="blog/index.html">Блог</a>
+    </p>
   </div>
 </footer>
+
 <script>
-(function(){
-  try{
-    var p=new URLSearchParams(location.search), m=document.getElementById('message');
-    if(m && p.get('topic')==='razbor'){
-      m.value='Прошу записать на 45-минутный разбор процессов.'+(p.get('calc')?'\n\nМой расчёт: '+p.get('calc'):'');
+  // Мобильное меню
+  (function () {
+    var btn = document.getElementById('menu-btn');
+    var nav = document.getElementById('mobile-nav');
+    if (!btn || !nav) return;
+    btn.addEventListener('click', function () {
+      var open = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', String(!open));
+      nav.classList.toggle('hidden');
+    });
+  })();
+</script>
+
+<script>
+  (function () {
+    'use strict';
+
+    // Подстановка данных из калькулятора (?topic=razbor&calc=...)
+    try {
+      var p = new URLSearchParams(location.search);
+      var msg = document.getElementById('f-message');
+      var calc = document.getElementById('calc-summary');
+
+      if (p.get('topic') === 'razbor' && msg) {
+        msg.value = 'Прошу записать на 45-минутный разбор процессов.';
+      }
+      if (p.get('calc') && calc) {
+        calc.value = p.get('calc');
+        if (msg) {
+          msg.value += (msg.value ? '\n\n' : '') + 'Мой расчёт: ' + p.get('calc');
+        }
+      }
+      // Метка решения из b2b-studio (B2B-страница)
+      var solution = p.get('solution');
+      if (solution) {
+        var typeSelect = document.getElementById('f-type');
+        if (typeSelect) typeSelect.value = 'Коммерческая организация';
+        var labels = { hr: 'AI-чат по базам знаний', sales: 'AI-консультант (Telegram/VK)', admin: 'ИИ-секретарь' };
+        if (labels[solution] && msg) {
+          msg.value = (msg.value ? msg.value + '\n\n' : '') + 'Интересует решение: ' + labels[solution] + '.';
+        }
+      }
+    } catch (e) { /* ignore */ }
+
+    // Валидация и AJAX-отправка
+    var form = document.getElementById('form');
+    var status = document.getElementById('form-status');
+    var btn = document.getElementById('submit-btn');
+    if (!form) return;
+
+    function showErr(id, text) {
+      var el = document.querySelector('.err[data-for="' + id + '"]');
+      if (!el) return;
+      if (text) { el.textContent = text; el.classList.remove('hidden'); }
+      else { el.textContent = ''; el.classList.add('hidden'); }
     }
-  }catch(e){}
-})();
+
+    function clearErrs() {
+      document.querySelectorAll('.err').forEach(function (el) {
+        el.textContent = ''; el.classList.add('hidden');
+      });
+    }
+
+    function validate() {
+      clearErrs();
+      var ok = true;
+      var name = document.getElementById('f-name');
+      var email = document.getElementById('f-email');
+      var consent = document.getElementById('f-consent');
+
+      if (!name.value.trim()) { showErr('f-name', 'Укажите имя'); ok = false; }
+      if (!email.value.trim()) { showErr('f-email', 'Укажите электронную почту'); ok = false; }
+      else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value.trim())) {
+        showErr('f-email', 'Проверьте формат адреса'); ok = false;
+      }
+      if (!consent.checked) { showErr('f-consent', 'Нужно согласие на обработку данных'); ok = false; }
+      return ok;
+    }
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      if (!validate()) {
+        status.textContent = '';
+        return;
+      }
+      btn.disabled = true;
+      status.className = 'text-[15px] text-muted';
+      status.textContent = 'Отправляем заявку…';
+
+      fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      })
+        .then(function (r) {
+          if (!r.ok) throw new Error('http ' + r.status);
+          form.reset();
+          status.className = 'text-[15px] font-semibold text-bash';
+          status.textContent = 'Заявка отправлена. Свяжемся с вами в течение рабочего дня.';
+        })
+        .catch(function () {
+          status.className = 'text-[15px] font-semibold text-red-600';
+          status.textContent = 'Не удалось отправить заявку. Позвоните +7 917 746-42-95 или напишите zames.78@mail.ru.';
+        })
+        .then(function () { btn.disabled = false; });
+    });
+  })();
 </script>
 </body>
 </html>
