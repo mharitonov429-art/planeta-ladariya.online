@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Калькулятор экономии от ИИ-ассистента | Planeta Ladariya</title>
+<meta name="description" content="Оцените, сколько часов и денег может высвободить ИИ-ассистент в вашей организации. Все допущения видны и меняются, расчёт ориентировочный.">
+<link rel="canonical" href="https://planeta-ladariya.online/calculator.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Калькулятор экономии от ИИ-ассистента | Planeta Ladariya">
+<meta property="og:description" content="Оцените, сколько часов и денег может высвободить ИИ-ассистент в вашей организации. Все допущения видны и меняются, расчёт ориентировочный.">
+<meta property="og:url" content="https://planeta-ladariya.online/calculator.html">
+<meta property="og:locale" content="ru_RU">
+<meta name="theme-color" content="#F1F3EE">
+<link rel="stylesheet" href="assets/css/site.css">
+<link rel="stylesheet" href="assets/css/portal.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Главная", "item": "https://planeta-ladariya.online/"}, {"@type": "ListItem", "position": 2, "name": "Калькулятор", "item": "https://planeta-ladariya.online/calculator.html"}]}</script>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=112808220', 'ym');
+
+    ym(112808220, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/112808220" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="index.html">Planeta Ladariya</a>
+    <nav aria-label="Основная навигация">
+      <a href="b2g-government.html">Администрациям</a><a href="b2b-studio.html">Бизнесу</a><a href="calculator.html" aria-current="page">Калькулятор</a><a href="blog/index.html">Блог</a><a href="contact.html">Контакты</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+
+    <section class="hero">
+      <h1>Калькулятор экономии от ИИ-ассистента</h1>
+      <p class="lead">Оцените, сколько рабочего времени и денег может высвободить ассистент в вашей организации. Все допущения видны и меняются: расчёт ориентировочный и не является обещанием результата.</p>
+    </section>
+
+    <section class="section">
+      <div class="calc">
+        <form id="calc-form" class="card form-grid" onsubmit="return false" aria-label="Параметры расчёта">
+          <label>Сфера деятельности
+            <select id="sphere">
+              <option value="services">Консалтинг и услуги</option>
+              <option value="trade">Торговля</option>
+              <option value="agro">АПК</option>
+            </select>
+          </label>
+          <label>Количество сотрудников: <output id="emp-out">50</output>
+            <input id="emp" type="range" min="5" max="500" step="5" value="50">
+          </label>
+          <label>Средняя зарплата до налогов, ₽ в месяц
+            <input id="salary" type="number" min="10000" step="1000" value="70000">
+          </label>
+          <label>Часов в неделю, которые ассистент высвобождает на одного сотрудника
+            <input id="hours" type="number" min="0" max="40" step="0.5" value="3">
+          </label>
+          <label>Надбавка на взносы и накладные расходы, %
+            <input id="overhead" type="number" min="0" max="100" step="1" value="30">
+          </label>
+          <label>Стоимость внедрения и сопровождения за первый год, ₽ (необязательно)
+            <input id="cost" type="number" min="0" step="10000" placeholder="например, 600000">
+          </label>
+          <div class="cta-row">
+            <button class="btn" type="button" id="preset-careful">Осторожный: 2 ч в неделю</button>
+            <button class="btn" type="button" id="preset-optimistic">Оптимистичный: 6 ч, 90 000 ₽, +42%</button>
+          </div>
+          <p class="fine">Стартовые значения по сферам, это допущения, а не статистика: консалтинг и услуги 70 000 ₽ и 3 ч, торговля 55 000 ₽ и 2 ч, АПК 50 000 ₽ и 1,5 ч в неделю. Подставьте свои цифры.</p>
+        </form>
+
+        <div class="card result" aria-live="polite">
+          <h2>Результат за год</h2>
+          <dl>
+            <div><dt>Возвращается рабочих часов</dt><dd class="big" id="r-hours">—</dd></div>
+            <div><dt>Это эквивалентно полным ставкам</dt><dd class="big" id="r-fte">—</dd></div>
+            <div><dt>Высвобождается фонда оплаты труда с взносами</dt><dd class="big" id="r-money">—</dd></div>
+            <div><dt>Окупаемость внедрения</dt><dd class="big" id="r-payback">—</dd></div>
+            <div><dt>Если эффект окажется вдвое меньше</dt><dd id="r-half">—</dd></div>
+          </dl>
+          <p class="fine">Формула: часов за год = сотрудники × часов в неделю × 50 недель. Ставка = 1 700 часов в год. Стоимость часа = зарплата × 12 × (1 + надбавка) ÷ 1 700.</p>
+          <p><a class="btn primary" id="lead-link" href="contact.html">Записаться на 45-минутный разбор</a></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="notice"><p>Главное допущение расчёта — сколько часов в неделю ассистент реально высвобождает. От него результат зависит сильнее всего. Поэтому мы предлагаем проверить его на пилоте с вашими процессами, а не принимать на веру.</p></div>
+    </section>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© Planeta Ladariya · Матвей Харитонов · с. Месягутово, Дуванский район, Республика Башкортостан</span>
+    <a href="tel:+79177464295">+7 917 746-42-95</a>
+    <a href="mailto:zames.78@mail.ru">zames.78@mail.ru</a>
+    <a href="blog/index.html">Блог</a>
+  </div>
+</footer>
+<script>
+(function(){
+  var WEEKS=50, FTE=1700;
+  var $=function(id){return document.getElementById(id);};
+  var presets={services:{salary:70000,hours:3},trade:{salary:55000,hours:2},agro:{salary:50000,hours:1.5}};
+  var fmt=function(n){return Math.round(n).toLocaleString('ru-RU');};
+  var summary='';
+  function num(id){var v=parseFloat($(id).value);return isNaN(v)?0:v;}
+  function calc(){
+    var emp=num('emp'), salary=num('salary'), hours=num('hours'), oh=num('overhead'), cost=num('cost');
+    $('emp-out').textContent=emp;
+    var hy=emp*hours*WEEKS, fte=hy/FTE;
+    var hourly=salary*12*(1+oh/100)/FTE, save=hy*hourly;
+    $('r-hours').textContent=fmt(hy)+' ч';
+    $('r-fte').textContent=(Math.round(fte*10)/10).toLocaleString('ru-RU')+' ставки';
+    $('r-money').textContent=fmt(save)+' ₽';
+    var pb='Укажите стоимость внедрения';
+    if(cost>0 && save>0){pb=(Math.round(cost/(save/12)*10)/10).toLocaleString('ru-RU')+' мес.';} else if(cost>0){pb='не окупается при этих допущениях';}
+    $('r-payback').textContent=pb;
+    var half=save/2, halfText=fmt(half)+' ₽ в год';
+    if(cost>0 && half>0){halfText+=', окупаемость '+(Math.round(cost/(half/12)*10)/10).toLocaleString('ru-RU')+' мес.';}
+    $('r-half').textContent=halfText;
+    summary='Сотрудников: '+emp+'; зарплата: '+fmt(salary)+' ₽; экономия: '+hours+' ч в неделю; надбавка: '+oh+'%. Итог: '+fmt(hy)+' ч в год, '+(Math.round(fte*10)/10)+' ставки, '+fmt(save)+' ₽ в год'+(cost>0?'; стоимость внедрения: '+fmt(cost)+' ₽':'')+'.';
+    $('lead-link').href='contact.html?topic=razbor&calc='+encodeURIComponent(summary);
+  }
+  function set(id,v){$(id).value=v;}
+  $('sphere').addEventListener('change',function(){var p=presets[this.value];set('salary',p.salary);set('hours',p.hours);set('overhead',30);calc();});
+  $('preset-careful').addEventListener('click',function(){set('hours',2);calc();});
+  $('preset-optimistic').addEventListener('click',function(){set('hours',6);set('salary',90000);set('overhead',42);calc();});
+  ['emp','salary','hours','overhead','cost'].forEach(function(id){$(id).addEventListener('input',calc);});
+  calc();
+})();
+</script>
+</body>
+</html>

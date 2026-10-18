@@ -1,0 +1,36 @@
+/* Дополнения к site.css для страниц портала. Подключается после site.css. */
+.hero{padding:44px 0 28px}
+.hero h1{font-size:clamp(28px,5vw,44px);line-height:1.15;margin:0 0 16px}
+.hero .lead{font-size:clamp(17px,2.4vw,20px);max-width:46em;margin:0 0 24px}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.section{padding:26px 0}
+.section>h2{margin:0 0 10px}
+.section .sub{margin:0 0 18px;max-width:46em}
+.grid{display:grid;gap:16px}
+.grid.two{grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+.grid.three{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.card{background:#fff;border:1px solid rgba(0,0,0,.12);border-radius:14px;padding:22px}
+.card h2,.card h3{margin-top:0}
+.card p:last-child,.card ul:last-child{margin-bottom:0}
+.price{font-size:32px;font-weight:700;line-height:1.1;margin-bottom:8px}
+.notice{border-left:4px solid currentColor;padding:12px 18px;background:rgba(0,0,0,.04);border-radius:0 10px 10px 0}
+.notice p{margin:0}
+.fine{font-size:14px;opacity:.78}
+.steps{counter-reset:s;list-style:none;padding:0;margin:0;display:grid;gap:12px}
+.steps li{counter-increment:s;padding-left:44px;position:relative;min-height:30px}
+.steps li::before{content:counter(s);position:absolute;left:0;top:0;width:30px;height:30px;border-radius:50%;border:1px solid currentColor;display:grid;place-items:center;font-weight:700}
+details.faq{border:1px solid rgba(0,0,0,.12);border-radius:10px;background:#fff;padding:12px 16px;margin:0 0 10px}
+details.faq summary{cursor:pointer;font-weight:600}
+details.faq p,details.faq ul{margin:10px 0 0}
+.form-grid{display:grid;gap:14px}
+.form-grid label{display:grid;gap:6px;font-weight:600}
+.form-grid label.check{display:flex;gap:8px;align-items:flex-start;font-weight:400}
+.form-grid input:not([type=checkbox]),.form-grid select,.form-grid textarea{font:inherit;padding:10px 12px;border:1px solid rgba(0,0,0,.25);border-radius:8px;background:#fff;width:100%;box-sizing:border-box}
+.form-grid input[type=range]{padding:0}
+.calc{display:grid;gap:20px;grid-template-columns:1fr}
+@media(min-width:860px){.calc{grid-template-columns:1.1fr .9fr}}
+.result dl{display:grid;gap:16px;margin:0 0 14px}
+.result dt{opacity:.75;margin:0}
+.result dd{margin:2px 0 0}
+.result .big{font-size:28px;font-weight:700;line-height:1.15}
+button.btn{cursor:pointer;font:inherit}
