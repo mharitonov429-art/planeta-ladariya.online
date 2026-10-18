@@ -1,21 +1,43 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" class="scroll-smooth">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>ИИ-справочник для администраций района | Planeta Ladariya</title>
-<meta name="description" content="Локальный ИИ-справочник для администраций и поселений: ответы жителям по вашим документам, на вашем оборудовании. Пилот от 150 000 ₽, запуск за 10–20 дней.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
+<meta name="theme-color" content="#ffffff">
+<title>ИИ-справочник для администраций и ФЗ-243 | Planeta Ladariya</title>
+<meta name="description" content="Локальный ИИ-справочник для администраций: данные остаются на вашем оборудовании. Что говорит закон 243-ФЗ и сроки до 1 марта 2027. Пилот 150 000 ₽.">
 <link rel="canonical" href="https://planeta-ladariya.online/b2g-government.html">
 <meta property="og:type" content="website">
-<meta property="og:title" content="ИИ-справочник для администраций района | Planeta Ladariya">
-<meta property="og:description" content="Локальный ИИ-справочник для администраций и поселений: ответы жителям по вашим документам, на вашем оборудовании. Пилот от 150 000 ₽, запуск за 10–20 дней.">
+<meta property="og:title" content="ИИ-справочник для администраций и ФЗ-243 | Planeta Ladariya">
+<meta property="og:description" content="Локальный ИИ-справочник для администраций: данные остаются на вашем оборудовании. Что говорит закон 243-ФЗ и сроки до 1 марта 2027. Пилот 150 000 ₽.">
 <meta property="og:url" content="https://planeta-ladariya.online/b2g-government.html">
 <meta property="og:locale" content="ru_RU">
-<meta name="theme-color" content="#F1F3EE">
-<link rel="stylesheet" href="assets/css/site.css">
-<link rel="stylesheet" href="assets/css/portal.css">
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Нужен ли интернет для работы справочника?", "acceptedAnswer": {"@type": "Answer", "text": "Нет. Сам справочник отвечает без выхода в интернет. Каналы для жителей, например VK или MAX, требуют подключения к сети."}}, {"@type": "Question", "name": "Что будет, если ответа нет в документах?", "acceptedAnswer": {"@type": "Answer", "text": "Справочник честно говорит, что данных нет, и предлагает обратиться в приёмную. Он не придумывает ответ."}}, {"@type": "Question", "name": "Кто обновляет базу знаний?", "acceptedAnswer": {"@type": "Answer", "text": "Сотрудник администрации. Обучение занимает около часа. Новые документы добавляются в базу, а сопровождение входит в ежемесячную плату."}}, {"@type": "Question", "name": "Какое оборудование нужно?", "acceptedAnswer": {"@type": "Answer", "text": "Система устанавливается на ваше оборудование: сервер или мощный компьютер. Для небольшой базы документов может хватить и ноутбука, требования уточняем на старте."}}, {"@type": "Question", "name": "Можно ли сначала посмотреть, как это работает?", "acceptedAnswer": {"@type": "Answer", "text": "Да. Демонстрация занимает 30–45 минут, лично или онлайн, на нескольких ваших реальных документах."}}]}</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700&display=swap">
+<script src="https://cdn.tailwindcss.com/3.4.17"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        fontFamily: { sans: ['"Golos Text"', 'ui-sans-serif', 'system-ui', '"Segoe UI"', 'Roboto', 'Arial', 'sans-serif'] },
+        colors: {
+          ink: '#12263A',
+          muted: '#51657A',
+          line: '#D6DEE6',
+          surface: '#F3F6F8',
+          brand: { DEFAULT: '#1D4F91', dark: '#173F74', soft: '#E6EEF8' },
+          bash: { DEFAULT: '#1B7F5C', dark: '#146347', soft: '#E3F2EC' }
+        }
+      }
+    }
+  }
+</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Обязывает ли закон администрацию внедрять ИИ-справочник?", "acceptedAnswer": {"@type": "Answer", "text": "Насколько нам известно, нет. Закон № 243-ФЗ регулирует большие фундаментальные модели ИИ и меры поддержки их развития. Обязанности внедрять справочник для администраций мы в нём не нашли. Применимость к вашему случаю уточняйте у юриста."}}, {"@type": "Question", "name": "Запрещены ли иностранные и открытые модели?", "acceptedAnswer": {"@type": "Answer", "text": "С 1 сентября 2026 года закон такого запрета не вводит. Случаи, где допустимы только суверенные и национальные модели, будет определять Правительство: это полномочие вступает в силу 1 марта 2027 года, а соответствующие постановления пока существуют в виде проектов. Если условия изменятся, это нужно будет проверить для вашей системы."}}, {"@type": "Question", "name": "Куда попадают вопросы жителей?", "acceptedAnswer": {"@type": "Answer", "text": "Справочник отвечает на вашем оборудовании, документы и ответы не передаются во внешние облачные сервисы. Если жители пишут через VK или MAX, сами сообщения проходят через эти платформы: это свойство мессенджеров, а не справочника. Внутренний интерфейс в приёмной работает без внешних каналов."}}, {"@type": "Question", "name": "Нужен ли интернет?", "acceptedAnswer": {"@type": "Answer", "text": "Сам справочник работает без интернета. Каналы связи с жителями, например VK и MAX, требуют подключения к сети."}}, {"@type": "Question", "name": "Что с персональными данными граждан?", "acceptedAnswer": {"@type": "Answer", "text": "Справочник отвечает по документам, которые вы загрузили. Оператором персональных данных остаётся администрация. Если жители указывают персональные данные в сообщениях, порядок их обработки по 152-ФЗ (журнал, срок хранения, согласия) мы согласуем с вами на старте и закрепим в регламенте."}}, {"@type": "Question", "name": "Кто отвечает за содержание ответов?", "acceptedAnswer": {"@type": "Answer", "text": "Администрация остаётся ответственной за свои документы. Справочник отвечает только по ним и показывает источник, поэтому риск выдуманных ответов ниже, но проверка актуальности документов остаётся за вами. Для этого на старте назначается ответственный сотрудник."}}, {"@type": "Question", "name": "Можно ли начать с малого?", "acceptedAnswer": {"@type": "Answer", "text": "Да, для этого и существует пилот: до 50 документов, один канал для жителей, проверка на 30–50 тестовых вопросах. Запуск занимает 10–20 рабочих дней после получения материалов."}}]}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Главная", "item": "https://planeta-ladariya.online/"}, {"@type": "ListItem", "position": 2, "name": "Администрациям", "item": "https://planeta-ladariya.online/b2g-government.html"}]}</script>
+
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript">
     (function(m,e,t,r,i,k,a){
@@ -30,117 +52,288 @@
 <noscript><div><img src="https://mc.yandex.ru/watch/112808220" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 <!-- /Yandex.Metrika counter -->
 </head>
-<body>
 
-<header class="top">
-  <div class="wrap">
-    <a class="brand" href="index.html">Planeta Ladariya</a>
-    <nav aria-label="Основная навигация">
-      <a href="b2g-government.html" aria-current="page">Администрациям</a><a href="b2b-studio.html">Бизнесу</a><a href="calculator.html">Калькулятор</a><a href="blog/index.html">Блог</a><a href="contact.html">Контакты</a>
+<body class="bg-white font-sans text-ink antialiased">
+<a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:left-3 focus:top-3 focus:z-50 focus:rounded-md focus:bg-white focus:px-4 focus:py-2 focus:text-brand focus:shadow">К основному содержимому</a>
+
+<!-- Шапка -->
+<header class="sticky top-0 z-40 border-b border-line bg-white/95 backdrop-blur">
+  <div class="mx-auto flex max-w-6xl items-center justify-between gap-4 px-5 py-3.5 sm:px-8">
+    <a href="index.html" class="text-lg font-bold tracking-tight text-ink">Planeta Ladariya</a>
+
+    <nav id="site-nav" aria-label="Основная навигация" class="hidden md:block">
+      <ul class="flex items-center gap-7 text-[15px] font-medium text-muted">
+        <li><a aria-current="page" class="border-b-2 border-bash pb-1 text-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand" href="b2g-government.html">Администрациям</a></li>
+        <li><a class="hover:text-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand" href="b2b-studio.html">Бизнесу</a></li>
+        <li><a class="hover:text-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand" href="calculator.html">Калькулятор</a></li>
+        <li><a class="hover:text-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand" href="blog/index.html">Блог</a></li>
+        <li><a class="hover:text-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand" href="contact.html">Контакты</a></li>
+      </ul>
     </nav>
+
+    <a href="contact.html" class="hidden rounded-md bg-brand px-4 py-2.5 text-[15px] font-semibold text-white hover:bg-brand-dark focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand md:inline-flex">Заказать демонстрацию</a>
+
+    <button id="menu-btn" type="button" aria-expanded="false" aria-controls="mobile-nav" class="rounded-md border border-line px-3.5 py-2 text-[15px] font-medium text-ink md:hidden">Меню</button>
   </div>
+  <nav id="mobile-nav" aria-label="Мобильная навигация" class="hidden border-t border-line bg-white md:hidden">
+    <ul class="mx-auto max-w-6xl px-5 py-2 text-base font-medium sm:px-8">
+      <li><a class="block py-3" href="b2g-government.html">Администрациям</a></li>
+      <li><a class="block py-3" href="b2b-studio.html">Бизнесу</a></li>
+      <li><a class="block py-3" href="calculator.html">Калькулятор</a></li>
+      <li><a class="block py-3" href="blog/index.html">Блог</a></li>
+      <li><a class="block py-3" href="contact.html">Контакты</a></li>
+      <li><a class="my-2 block rounded-md bg-brand px-4 py-3 text-center font-semibold text-white" href="contact.html">Заказать демонстрацию</a></li>
+    </ul>
+  </nav>
 </header>
 
-<main>
-  <div class="wrap">
+<main id="main">
 
-    <section class="hero">
-      <h1>Локальный ИИ-справочник для администраций районов и сельских поселений</h1>
-      <p class="lead">Цифровой справочник отвечает жителям на типовые вопросы по документам вашей администрации: круглосуточно, со ссылкой на источник и без отправки данных в облако.</p>
-      <div class="cta-row"><a class="btn primary" href="contact.html">Заказать демонстрацию</a><a class="btn" href="#pilot">Условия пилота</a></div>
-    </section>
-
-    <section class="section">
-      <h2>Какую проблему решает справочник</h2>
-      <p>Сотрудники администраций ежедневно отвечают на одни и те же вопросы: время приёма, контакты ЖКХ, расписание ФАП и школы, афиши Дома культуры, отключения воды и света, порядок получения справок. Справочник берёт типовые вопросы на себя, а сотрудники занимаются сложными случаями. Какую долю обращений он закрывает именно у вас, мы измеряем на пилоте, а не обещаем заранее.</p>
-    </section>
-
-    <section class="section">
-      <h2>Как он работает</h2>
-      <ul>
-        <li>Отвечает только по документам, которые вы загрузили: приказы, регламенты, расписания, контакты, объявления.</li>
-        <li>Указывает, из какого документа взят ответ.</li>
-        <li>Если подходящей информации нет, говорит «данных нет» и не выдумывает ответ.</li>
-        <li>Устанавливается на ваше оборудование, данные остаются на вашей территории.</li>
-        <li>Сам справочник работает без интернета. Жители могут обращаться через привычные мессенджеры, например VK и MAX.</li>
-      </ul>
-      <p class="fine">Подходит для администраций, МУП, управляющих компаний, школ и колледжей, клиник и домов культуры.</p>
-    </section>
-
-    <section class="section" id="pilot">
-      <h2>Пилот: состав, срок, цена</h2>
-      <div class="grid two">
-        <article class="card"><div class="price">150 000 ₽</div><p>разово.</p>
-          <ul><li>установка на ваше оборудование;</li><li>загрузка до 50 документов;</li><li>настройка одного канала для жителей;</li><li>проверка на 30–50 типовых вопросах;</li><li>обучение сотрудника, который будет обновлять базу.</li></ul></article>
-        <article class="card"><div class="price">30 000 ₽ в месяц</div><p>сопровождение: обновление базы знаний и техническая поддержка.</p>
-          <p><strong>Срок запуска:</strong> 10–20 рабочих дней после получения материалов.</p></article>
+  <!-- Первый экран -->
+  <section class="border-b border-line bg-surface">
+    <div class="mx-auto grid max-w-6xl items-center gap-12 px-5 py-14 sm:px-8 md:py-20 lg:grid-cols-[1.15fr_0.85fr]">
+      <div>
+        <h1 class="max-w-3xl text-4xl font-bold leading-[1.1] tracking-tight text-ink sm:text-5xl">Локальный ИИ-справочник для администраций: данные остаются на вашей территории</h1>
+        <p class="mt-6 max-w-xl text-lg leading-relaxed text-muted">Справочник отвечает жителям на типовые вопросы по документам вашей администрации. Он установлен на вашем оборудовании, работает без интернета и показывает источник каждого ответа.</p>
+        <div class="mt-8 flex flex-wrap items-center gap-3">
+          <a href="contact.html" class="inline-flex rounded-md bg-bash px-5 py-3 font-semibold text-white hover:bg-bash-dark focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-bash">Заказать демонстрацию</a>
+          <a href="#zakon" class="inline-flex rounded-md border border-line bg-white px-5 py-3 font-semibold text-ink hover:border-muted focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand">Что говорит закон 243-ФЗ</a>
+        </div>
       </div>
-    </section>
 
-    <section class="section">
-      <h2>Как проходит запуск</h2>
-      <ol class="steps">
-        <li>Собираем и проверяем документы: оставляем актуальные, убираем дубли и черновики.</li>
-        <li>Устанавливаем систему на ваше оборудование.</li>
-        <li>Загружаем документы и настраиваем правила безопасных ответов.</li>
-        <li>Проверяем справочник на 30–50 типовых вопросах жителей.</li>
-        <li>Подключаем канал для жителей и обучаем сотрудника.</li>
+      <aside aria-label="Условия пилота" class="rounded-xl border border-line bg-white p-6 shadow-sm">
+        <p class="text-[15px] font-semibold text-ink">Пилот для администрации</p>
+        <p class="mt-3 text-4xl font-bold tracking-tight text-ink">150 000 ₽</p>
+        <p class="text-muted">разово, затем 30 000 ₽ в месяц за сопровождение</p>
+        <dl class="mt-5 space-y-3 border-t border-line pt-5 text-[15px]">
+          <div class="flex justify-between gap-4"><dt class="text-muted">Срок запуска</dt><dd class="font-semibold text-ink">10–20 рабочих дней</dd></div>
+          <div class="flex justify-between gap-4"><dt class="text-muted">Документов в базе</dt><dd class="font-semibold text-ink">до 50</dd></div>
+          <div class="flex justify-between gap-4"><dt class="text-muted">Проверка</dt><dd class="font-semibold text-ink">30–50 вопросов</dd></div>
+        </dl>
+      </aside>
+    </div>
+  </section>
+
+  <!-- Проблема -->
+  <section>
+    <div class="mx-auto max-w-6xl px-5 py-16 sm:px-8 md:py-20">
+      <h2 class="text-3xl font-bold tracking-tight text-ink">Какую задачу решает справочник</h2>
+      <div class="mt-6 max-w-3xl space-y-4 text-[17px] leading-relaxed text-muted">
+        <p>Сотрудники администраций ежедневно отвечают на одни и те же вопросы: график приёма главы, контакты ЖКХ, расписание ФАП и школы, афиши Дома культуры, отключения воды и света, порядок получения справок. Справочник берёт типовые вопросы на себя, а сотрудники занимаются сложными случаями.</p>
+        <p>По нашей оценке, до 40% рабочего времени уходит на типовые обращения. Какую долю закроет справочник именно у вас, мы измеряем на пилоте, а не обещаем заранее.</p>
+      </div>
+      <p class="mt-5 max-w-3xl text-[15px] text-muted">Подходит для администраций районов и поселений, МУП, управляющих компаний, школ и колледжей, клиник и домов культуры.</p>
+    </div>
+  </section>
+
+  <!-- Защита данных -->
+  <section id="dannye" class="scroll-mt-20 border-y border-line bg-surface">
+    <div class="mx-auto max-w-6xl px-5 py-16 sm:px-8 md:py-20">
+      <h2 class="text-3xl font-bold tracking-tight text-ink">Как устроена защита данных</h2>
+      <p class="mt-4 max-w-3xl text-[17px] leading-relaxed text-muted">Главный принцип: данные не покидают вашу территорию. Вот что это значит на практике.</p>
+
+      <div class="mt-10 grid gap-8 md:grid-cols-2">
+        <div class="border-l-4 border-bash pl-5">
+          <h3 class="text-lg font-bold text-ink">Установка на ваше оборудование</h3>
+          <p class="mt-2 leading-relaxed text-muted">Система работает на вашем сервере или компьютере. Документы, база знаний и вопросы хранятся у вас.</p>
+        </div>
+        <div class="border-l-4 border-bash pl-5">
+          <h3 class="text-lg font-bold text-ink">Нет передачи во внешние облака</h3>
+          <p class="mt-2 leading-relaxed text-muted">Обработка запросов идёт локально. Документы и ответы не отправляются в облачные сервисы третьих лиц.</p>
+        </div>
+        <div class="border-l-4 border-bash pl-5">
+          <h3 class="text-lg font-bold text-ink">Работа без интернета</h3>
+          <p class="mt-2 leading-relaxed text-muted">Сам справочник отвечает при нестабильной связи и даже без неё. Для сельских территорий это важно.</p>
+        </div>
+        <div class="border-l-4 border-bash pl-5">
+          <h3 class="text-lg font-bold text-ink">Ответы только по вашим документам</h3>
+          <p class="mt-2 leading-relaxed text-muted">Справочник называет документ, из которого взят ответ. Если подходящих данных нет, он так и говорит и не выдумывает ответ.</p>
+        </div>
+      </div>
+
+      <div class="mt-12 grid gap-8 md:grid-cols-2">
+        <div class="rounded-xl border border-line bg-white p-7">
+          <h3 class="text-lg font-bold text-ink">Что мы согласуем с вами до запуска</h3>
+          <ul class="mt-4 space-y-2 text-[17px] leading-relaxed text-ink">
+            <li>какие документы загружать и кто отвечает за их актуальность;</li>
+            <li>правила безопасных ответов: что справочник может говорить, а что нет;</li>
+            <li>кто имеет доступ к интерфейсу и к документам;</li>
+            <li>как ведётся журнал запросов и ответов;</li>
+            <li>как делаются резервные копии базы знаний.</li>
+          </ul>
+        </div>
+        <div class="rounded-xl border border-line bg-white p-7">
+          <h3 class="text-lg font-bold text-ink">Чего мы не обещаем</h3>
+          <ul class="mt-4 space-y-2 text-[17px] leading-relaxed text-ink">
+            <li>Мы не выдаём юридических заключений и не заменяем вашего юриста или ответственного за защиту данных.</li>
+            <li>Мессенджеры VK и MAX работают через внешние платформы: сообщения жителей проходят через них, ответ формируется локально.</li>
+            <li>Актуальность документов остаётся за администрацией. Справочник отвечает только тем, что в них есть.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Закон 243-ФЗ -->
+  <section id="zakon" class="scroll-mt-20">
+    <div class="mx-auto max-w-6xl px-5 py-16 sm:px-8 md:py-20">
+      <h2 class="text-3xl font-bold tracking-tight text-ink">Закон № 243-ФЗ: что в нём сказано</h2>
+      <p class="mt-4 max-w-3xl text-[17px] leading-relaxed text-muted">Федеральный закон от 26.07.2026 № 243-ФЗ «О поддержке развития технологий искусственного интеллекта в Российской Федерации» регулирует большие фундаментальные модели ИИ. Ниже только то, что мы смогли проверить по тексту закона и разборам юристов.</p>
+
+      <div class="mt-10 grid gap-12 lg:grid-cols-[0.9fr_1.1fr]">
+        <ol class="relative space-y-7 border-l-2 border-line pl-7" aria-label="Сроки действия закона">
+          <li>
+            <time class="font-bold text-ink" datetime="2026-07-26">26 июля 2026</time>
+            <p class="mt-1 text-muted">Закон подписан.</p>
+          </li>
+          <li>
+            <time class="font-bold text-ink" datetime="2026-09-01">1 сентября 2026</time>
+            <p class="mt-1 text-muted">Закон вступил в силу: цели, понятия, принципы, меры поддержки.</p>
+          </li>
+          <li>
+            <time class="font-bold text-bash" datetime="2027-03-01">1 марта 2027</time>
+            <p class="mt-1 text-muted">Вступают статьи 8–10, пункты 3–5 части 2 статьи 5 и части 2–5 статьи 6. Здесь же появляется полномочие Правительства определять случаи, где допустимы только суверенные и национальные модели.</p>
+          </li>
+          <li>
+            <time class="font-bold text-ink" datetime="2032-09-01">1 сентября 2032</time>
+            <p class="mt-1 text-muted">Конец переходного периода по части 3 статьи 13.</p>
+          </li>
+        </ol>
+
+        <div class="space-y-5 text-[17px] leading-relaxed text-muted">
+          <div>
+            <h3 class="text-lg font-bold text-ink">Переходная норма, часть 3 статьи 13</h3>
+            <p class="mt-2">Случаи, в которых допускается применение только суверенных и (или) национальных больших фундаментальных моделей, до 1 сентября 2032 года не распространяются на информационные системы, где применяются такие модели, созданные и (или) эксплуатируемые на день вступления в силу пункта 3 части 2 статьи 5 (на 1 марта 2027 года). Условие: обработка и хранение данных на территории России.</p>
+          </div>
+          <div>
+            <h3 class="text-lg font-bold text-ink">Чего в законе пока нет</h3>
+            <p class="mt-2">Запрета на использование иностранных моделей закон с 1 сентября 2026 года не вводит. Случаи, где допустимы только суверенные и национальные модели, определит Правительство, и на начало октября 2026 года соответствующие постановления существуют в виде проектов.</p>
+          </div>
+          <p class="rounded-md border-l-4 border-bash bg-bash-soft px-5 py-4 text-ink">Практический вывод: переходная норма привязана к системам, которые уже работают на 1 марта 2027 года, а установка справочника на вашем оборудовании в России отвечает условию о хранении данных. Если вы планируете ИИ-справочник, пилот разумно запустить до этой даты. Закон не обязывает администрации его внедрять.</p>
+          <p class="text-[15px]">Информация справочная и не является юридической консультацией: применимость к вашей системе уточняйте у юриста.</p>
+        </div>
+      </div>
+
+      <details class="mt-10 max-w-3xl rounded-md border border-line px-5 py-4">
+        <summary class="cursor-pointer font-semibold text-ink">Источники</summary>
+        <ul class="mt-3 space-y-2 text-[15px] text-muted">
+          <li><a class="text-brand underline underline-offset-2 hover:text-brand-dark" href="https://base.garant.ru/414652934/4d6cc5b8235f826b2c67847b967f8695/" target="_blank" rel="noopener">Статья 13 закона № 243-ФЗ, ГАРАНТ</a>, дата обращения 18.10.2026</li>
+          <li><a class="text-brand underline underline-offset-2 hover:text-brand-dark" href="https://base.garant.ru/414652934/" target="_blank" rel="noopener">Федеральный закон от 26.07.2026 № 243-ФЗ, ГАРАНТ</a>, дата обращения 18.10.2026</li>
+          <li><a class="text-brand underline underline-offset-2 hover:text-brand-dark" href="https://www.sostav.ru/blogs/293439/113146" target="_blank" rel="noopener">Закон об ИИ в России: что 243-ФЗ меняет для бизнеса и чего в нём нет, Sostav</a>, дата обращения 18.10.2026</li>
+        </ul>
+      </details>
+    </div>
+  </section>
+
+  <!-- 152-ФЗ -->
+  <section class="border-y border-line bg-surface">
+    <div class="mx-auto max-w-6xl px-5 py-16 sm:px-8 md:py-20">
+      <h2 class="text-3xl font-bold tracking-tight text-ink">Персональные данные и 152-ФЗ</h2>
+      <div class="mt-6 max-w-3xl space-y-4 text-[17px] leading-relaxed text-muted">
+        <p>Справочник отвечает по документам, которые вы загрузили: приказам, регламентам, расписаниям, контактам и объявлениям. Оператором персональных данных граждан остаётся администрация.</p>
+        <p>Если жители указывают персональные данные в сообщениях, порядок их обработки по 152-ФЗ мы согласуем с вами на старте пилота: журнал запросов, срок хранения, согласия. Локальная установка убирает один из рисков, передачу данных во внешние облачные сервисы, но не заменяет остальных организационных мер.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Запуск -->
+  <section>
+    <div class="mx-auto max-w-6xl px-5 py-16 sm:px-8 md:py-20">
+      <h2 class="text-3xl font-bold tracking-tight text-ink">Как проходит запуск за 10–20 рабочих дней</h2>
+      <ol class="mt-10 grid gap-6 md:grid-cols-5">
+        <li class="border-t-4 border-bash pt-4"><p class="font-bold text-ink">Документы</p><p class="mt-2 text-[15px] leading-relaxed text-muted">Собираем и проверяем: оставляем актуальные, убираем дубли и черновики.</p></li>
+        <li class="border-t-4 border-bash pt-4"><p class="font-bold text-ink">Установка</p><p class="mt-2 text-[15px] leading-relaxed text-muted">Ставим систему на ваше оборудование.</p></li>
+        <li class="border-t-4 border-bash pt-4"><p class="font-bold text-ink">Настройка</p><p class="mt-2 text-[15px] leading-relaxed text-muted">Загружаем документы и задаём правила безопасных ответов.</p></li>
+        <li class="border-t-4 border-bash pt-4"><p class="font-bold text-ink">Проверка</p><p class="mt-2 text-[15px] leading-relaxed text-muted">Прогоняем 30–50 типовых вопросов жителей и сверяем ответы.</p></li>
+        <li class="border-t-4 border-bash pt-4"><p class="font-bold text-ink">Запуск</p><p class="mt-2 text-[15px] leading-relaxed text-muted">Подключаем канал для жителей и обучаем сотрудника, который будет обновлять базу.</p></li>
       </ol>
-    </section>
 
-    <section class="section">
-      <h2>Что нужно от администрации</h2>
-      <ul>
+      <h3 class="mt-14 text-xl font-bold text-ink">Что нужно от администрации</h3>
+      <ul class="mt-4 max-w-3xl space-y-2 text-[17px] leading-relaxed text-muted">
         <li>Электронные версии актуальных документов.</li>
-        <li>Сотрудник, который отвечает за обновление базы.</li>
+        <li>Сотрудник, который отвечает за обновление базы знаний. Обучение занимает около часа.</li>
         <li>Выбор канала для жителей.</li>
-        <li>Оборудование для установки, мы поможем определить требования.</li>
+        <li>Оборудование для установки: сервер или мощный компьютер. Требования определим вместе.</li>
       </ul>
-    </section>
+    </div>
+  </section>
 
-    <section class="section" id="zakon">
-      <h2>Закон об ИИ: что важно знать администрации</h2>
-      <div class="notice">
-        <p><strong>Коротко.</strong> Закон не обязывает администрации внедрять ИИ-справочник, но одна из его переходных норм делает разумным запуск пилота до 1 марта 2027 года. Применимость к вашей системе уточняйте у юриста.</p>
+  <!-- Цена -->
+  <section id="pilot" class="scroll-mt-20 border-y border-line bg-surface">
+    <div class="mx-auto max-w-6xl px-5 py-16 sm:px-8 md:py-20">
+      <h2 class="text-3xl font-bold tracking-tight text-ink">Пилот: состав и стоимость</h2>
+      <div class="mt-10 grid gap-6 md:grid-cols-2">
+        <div class="rounded-xl border border-line bg-white p-7">
+          <p class="text-4xl font-bold tracking-tight text-ink">150 000 ₽</p>
+          <p class="mt-1 text-muted">разово</p>
+          <ul class="mt-5 space-y-2 text-[17px] leading-relaxed text-ink">
+            <li>Установка на ваше оборудование</li>
+            <li>Загрузка до 50 документов</li>
+            <li>Настройка одного канала для жителей</li>
+            <li>Проверка на 30–50 тестовых вопросах жителей</li>
+            <li>Обучение сотрудника, который будет обновлять базу</li>
+          </ul>
+        </div>
+        <div class="rounded-xl border border-line bg-white p-7">
+          <p class="text-4xl font-bold tracking-tight text-ink">30 000 ₽</p>
+          <p class="mt-1 text-muted">в месяц</p>
+          <p class="mt-5 text-[17px] leading-relaxed text-ink">Сопровождение: обновление базы знаний и техническая поддержка.</p>
+        </div>
       </div>
-      <ul>
-        <li>Федеральный закон от 26.07.2026 № 243-ФЗ «О поддержке развития технологий искусственного интеллекта в Российской Федерации» действует с 1 сентября 2026 года. Статьи 8–10, пункты 3–5 части 2 статьи 5 и части 2–5 статьи 6 вступают в силу с 1 марта 2027 года.</li>
-        <li>Закон регулирует большие фундаментальные модели ИИ. Многие критерии и порядок применения он передаёт Правительству; на начало октября 2026 года соответствующие постановления существуют в виде проектов.</li>
-        <li>Часть 3 статьи 13: случаи, в которых допускается применение только суверенных и (или) национальных больших фундаментальных моделей, до 1 сентября 2032 года не распространяются на информационные системы, где применяются такие модели, созданные и (или) эксплуатируемые на день вступления в силу пункта 3 части 2 статьи 5 (то есть на 1 марта 2027 года), при условии обработки и хранения данных на территории России.</li>
-        <li>Сами эти случаи пока не определены, поэтому норма не гарантирует конкретных последствий. Практический вывод: она привязана к системам, которые уже работают на 1 марта 2027 года.</li>
-      </ul>
-      <p class="fine">Информация носит справочный характер и не является юридической консультацией.</p>
-      <details class="faq"><summary>Источники</summary><ul><li><a href="https://base.garant.ru/414652934/4d6cc5b8235f826b2c67847b967f8695/" target="_blank" rel="noopener">Статья 13 закона № 243-ФЗ, ГАРАНТ</a>, дата обращения 18.10.2026</li><li><a href="https://base.garant.ru/414652934/" target="_blank" rel="noopener">Федеральный закон от 26.07.2026 № 243-ФЗ, ГАРАНТ</a>, дата обращения 18.10.2026</li><li><a href="https://www.sostav.ru/blogs/293439/113146" target="_blank" rel="noopener">Закон об ИИ: что 243-ФЗ меняет для бизнеса и чего в нём нет, Sostav</a>, дата обращения 18.10.2026</li></ul></details>
-    </section>
+    </div>
+  </section>
 
-    <section class="section">
-      <h2>Безопасность и персональные данные</h2>
-      <p>Справочник отвечает по документам, которые вы в него загрузили. Если в обращениях встречаются персональные данные граждан, их обработка регулируется 152-ФЗ, и порядок мы согласуем с вами на старте пилота.</p>
-    </section>
-
-    <section class="section">
-      <h2>Частые вопросы</h2>
-      <details class="faq"><summary>Нужен ли интернет для работы справочника?</summary><p>Нет. Сам справочник отвечает без выхода в интернет. Каналы для жителей, например VK или MAX, требуют подключения к сети.</p></details><details class="faq"><summary>Что будет, если ответа нет в документах?</summary><p>Справочник честно говорит, что данных нет, и предлагает обратиться в приёмную. Он не придумывает ответ.</p></details><details class="faq"><summary>Кто обновляет базу знаний?</summary><p>Сотрудник администрации. Обучение занимает около часа. Новые документы добавляются в базу, а сопровождение входит в ежемесячную плату.</p></details><details class="faq"><summary>Какое оборудование нужно?</summary><p>Система устанавливается на ваше оборудование: сервер или мощный компьютер. Для небольшой базы документов может хватить и ноутбука, требования уточняем на старте.</p></details><details class="faq"><summary>Можно ли сначала посмотреть, как это работает?</summary><p>Да. Демонстрация занимает 30–45 минут, лично или онлайн, на нескольких ваших реальных документах.</p></details>
-    </section>
-
-    <section class="section">
-      <div class="cta-box">
-        <h2>Покажем на ваших документах</h2>
-        <p>Демонстрация занимает 30–45 минут, лично или онлайн. Вы выбираете несколько реальных документов и видите, как меняются ответы после загрузки.</p>
-        <a class="btn primary" href="contact.html">Заказать демонстрацию</a>
+  <!-- Вопросы -->
+  <section>
+    <div class="mx-auto max-w-6xl px-5 py-16 sm:px-8 md:py-20">
+      <h2 class="text-3xl font-bold tracking-tight text-ink">Частые вопросы</h2>
+      <div class="mt-8 max-w-3xl border-t border-line">
+        <details class="border-b border-line py-4"><summary class="cursor-pointer text-lg font-semibold text-ink">Обязывает ли закон администрацию внедрять ИИ-справочник?</summary><p class="mt-3 max-w-3xl text-[17px] leading-relaxed text-muted">Насколько нам известно, нет. Закон № 243-ФЗ регулирует большие фундаментальные модели ИИ и меры поддержки их развития. Обязанности внедрять справочник для администраций мы в нём не нашли. Применимость к вашему случаю уточняйте у юриста.</p></details><details class="border-b border-line py-4"><summary class="cursor-pointer text-lg font-semibold text-ink">Запрещены ли иностранные и открытые модели?</summary><p class="mt-3 max-w-3xl text-[17px] leading-relaxed text-muted">С 1 сентября 2026 года закон такого запрета не вводит. Случаи, где допустимы только суверенные и национальные модели, будет определять Правительство: это полномочие вступает в силу 1 марта 2027 года, а соответствующие постановления пока существуют в виде проектов. Если условия изменятся, это нужно будет проверить для вашей системы.</p></details><details class="border-b border-line py-4"><summary class="cursor-pointer text-lg font-semibold text-ink">Куда попадают вопросы жителей?</summary><p class="mt-3 max-w-3xl text-[17px] leading-relaxed text-muted">Справочник отвечает на вашем оборудовании, документы и ответы не передаются во внешние облачные сервисы. Если жители пишут через VK или MAX, сами сообщения проходят через эти платформы: это свойство мессенджеров, а не справочника. Внутренний интерфейс в приёмной работает без внешних каналов.</p></details><details class="border-b border-line py-4"><summary class="cursor-pointer text-lg font-semibold text-ink">Нужен ли интернет?</summary><p class="mt-3 max-w-3xl text-[17px] leading-relaxed text-muted">Сам справочник работает без интернета. Каналы связи с жителями, например VK и MAX, требуют подключения к сети.</p></details><details class="border-b border-line py-4"><summary class="cursor-pointer text-lg font-semibold text-ink">Что с персональными данными граждан?</summary><p class="mt-3 max-w-3xl text-[17px] leading-relaxed text-muted">Справочник отвечает по документам, которые вы загрузили. Оператором персональных данных остаётся администрация. Если жители указывают персональные данные в сообщениях, порядок их обработки по 152-ФЗ (журнал, срок хранения, согласия) мы согласуем с вами на старте и закрепим в регламенте.</p></details><details class="border-b border-line py-4"><summary class="cursor-pointer text-lg font-semibold text-ink">Кто отвечает за содержание ответов?</summary><p class="mt-3 max-w-3xl text-[17px] leading-relaxed text-muted">Администрация остаётся ответственной за свои документы. Справочник отвечает только по ним и показывает источник, поэтому риск выдуманных ответов ниже, но проверка актуальности документов остаётся за вами. Для этого на старте назначается ответственный сотрудник.</p></details><details class="border-b border-line py-4"><summary class="cursor-pointer text-lg font-semibold text-ink">Можно ли начать с малого?</summary><p class="mt-3 max-w-3xl text-[17px] leading-relaxed text-muted">Да, для этого и существует пилот: до 50 документов, один канал для жителей, проверка на 30–50 тестовых вопросах. Запуск занимает 10–20 рабочих дней после получения материалов.</p></details>
       </div>
-    </section>
-  </div>
+    </div>
+  </section>
+
+  <!-- Призыв -->
+  <section class="border-t border-line bg-surface">
+    <div class="mx-auto grid max-w-6xl gap-10 px-5 py-16 sm:px-8 md:grid-cols-2 md:py-20">
+      <div>
+        <h2 class="text-3xl font-bold tracking-tight text-ink">Покажем на ваших документах</h2>
+        <p class="mt-4 max-w-md text-[17px] leading-relaxed text-muted">Демонстрация занимает 30–45 минут, лично или онлайн. Вы выбираете несколько реальных документов и видите, как меняются ответы после загрузки.</p>
+        <a href="contact.html" class="mt-6 inline-flex rounded-md bg-bash px-5 py-3 font-semibold text-white hover:bg-bash-dark focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-bash">Заказать демонстрацию</a>
+      </div>
+      <address class="not-italic">
+        <p class="text-xl font-bold text-ink">Матвей Харитонов</p>
+        <p class="mt-2 text-[17px] text-muted">с. Месягутово, Дуванский район, Республика Башкортостан</p>
+        <p class="mt-4 text-[17px]"><a class="font-semibold text-brand hover:text-brand-dark" href="tel:+79177464295">+7 917 746-42-95</a></p>
+        <p class="mt-1 text-[17px]"><a class="font-semibold text-brand hover:text-brand-dark" href="mailto:zames.78@mail.ru">zames.78@mail.ru</a></p>
+      </address>
+    </div>
+  </section>
+
 </main>
 
-<footer>
-  <div class="wrap">
-    <span>© Planeta Ladariya · Матвей Харитонов · с. Месягутово, Дуванский район, Республика Башкортостан</span>
-    <a href="tel:+79177464295">+7 917 746-42-95</a>
-    <a href="mailto:zames.78@mail.ru">zames.78@mail.ru</a>
-    <a href="blog/index.html">Блог</a>
+<footer class="border-t border-line bg-surface">
+  <div class="mx-auto flex max-w-6xl flex-col gap-4 px-5 py-8 text-[15px] text-muted sm:px-8 md:flex-row md:items-center md:justify-between">
+    <p>© Planeta Ladariya, Матвей Харитонов, с. Месягутово</p>
+    <p class="flex flex-wrap gap-x-6 gap-y-1">
+      <a class="hover:text-ink" href="tel:+79177464295">+7 917 746-42-95</a>
+      <a class="hover:text-ink" href="mailto:zames.78@mail.ru">zames.78@mail.ru</a>
+      <a class="hover:text-ink" href="blog/index.html">Блог</a>
+    </p>
   </div>
 </footer>
 
+<script>
+  (function () {
+    var btn = document.getElementById('menu-btn');
+    var nav = document.getElementById('mobile-nav');
+    if (!btn || !nav) return;
+    btn.addEventListener('click', function () {
+      var open = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', String(!open));
+      nav.classList.toggle('hidden');
+    });
+  })();
+</script>
 </body>
 </html>

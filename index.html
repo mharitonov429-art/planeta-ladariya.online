@@ -1,8 +1,10 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" class="scroll-smooth">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
+<meta name="theme-color" content="#ffffff">
 <title>Локальный ИИ для администраций и бизнеса | Planeta Ladariya</title>
 <meta name="description" content="Локальные ИИ-справочники для администраций и ИИ-ассистенты для бизнеса в Башкортостане: на вашем оборудовании, по вашим документам, без облака.">
 <link rel="canonical" href="https://planeta-ladariya.online/">
@@ -11,10 +13,31 @@
 <meta property="og:description" content="Локальные ИИ-справочники для администраций и ИИ-ассистенты для бизнеса в Башкортостане: на вашем оборудовании, по вашим документам, без облака.">
 <meta property="og:url" content="https://planeta-ladariya.online/">
 <meta property="og:locale" content="ru_RU">
-<meta name="theme-color" content="#F1F3EE">
-<link rel="stylesheet" href="assets/css/site.css">
-<link rel="stylesheet" href="assets/css/portal.css">
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "ProfessionalService", "name": "Planeta Ladariya", "url": "https://planeta-ladariya.online/", "description": "Локальные ИИ-справочники для администраций и ИИ-ассистенты для бизнеса.", "telephone": "+7 917 746-42-95", "email": "zames.78@mail.ru", "address": {"@type": "PostalAddress", "addressLocality": "с. Месягутово", "addressRegion": "Республика Башкортостан", "addressCountry": "RU"}}</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700&display=swap">
+<script src="https://cdn.tailwindcss.com/3.4.17"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        fontFamily: { sans: ['"Golos Text"', 'ui-sans-serif', 'system-ui', '"Segoe UI"', 'Roboto', 'Arial', 'sans-serif'] },
+        colors: {
+          ink: '#12263A',
+          muted: '#51657A',
+          line: '#D6DEE6',
+          surface: '#F3F6F8',
+          brand: { DEFAULT: '#1D4F91', dark: '#173F74', soft: '#E6EEF8' },
+          bash: { DEFAULT: '#1B7F5C', dark: '#146347', soft: '#E3F2EC' }
+        }
+      }
+    }
+  }
+</script>
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"Planeta Ladariya","url":"https://planeta-ladariya.online/","description":"Локальные ИИ-справочники для администраций и ИИ-ассистенты для бизнеса.","telephone":"+7 917 746-42-95","email":"zames.78@mail.ru","address":{"@type":"PostalAddress","addressLocality":"с. Месягутово","addressRegion":"Республика Башкортостан","addressCountry":"RU"}}</script>
+
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript">
     (function(m,e,t,r,i,k,a){
@@ -29,105 +52,241 @@
 <noscript><div><img src="https://mc.yandex.ru/watch/112808220" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 <!-- /Yandex.Metrika counter -->
 </head>
-<body>
 
-<header class="top">
-  <div class="wrap">
-    <a class="brand" href="index.html">Planeta Ladariya</a>
-    <nav aria-label="Основная навигация">
-      <a href="b2g-government.html">Администрациям</a><a href="b2b-studio.html">Бизнесу</a><a href="calculator.html">Калькулятор</a><a href="blog/index.html">Блог</a><a href="contact.html">Контакты</a>
+<body class="bg-white font-sans text-ink antialiased">
+<a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:left-3 focus:top-3 focus:z-50 focus:rounded-md focus:bg-white focus:px-4 focus:py-2 focus:text-brand focus:shadow">К основному содержимому</a>
+
+<!-- Шапка -->
+<header class="sticky top-0 z-40 border-b border-line bg-white/95 backdrop-blur">
+  <div class="mx-auto flex max-w-6xl items-center justify-between gap-4 px-5 py-3.5 sm:px-8">
+    <a href="index.html" class="text-lg font-bold tracking-tight text-ink">Planeta Ladariya</a>
+
+    <nav id="site-nav" aria-label="Основная навигация" class="hidden md:block">
+      <ul class="flex items-center gap-7 text-[15px] font-medium text-muted">
+        <li><a class="hover:text-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand" href="b2g-government.html">Администрациям</a></li>
+        <li><a class="hover:text-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand" href="b2b-studio.html">Бизнесу</a></li>
+        <li><a class="hover:text-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand" href="calculator.html">Калькулятор</a></li>
+        <li><a class="hover:text-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand" href="blog/index.html">Блог</a></li>
+        <li><a class="hover:text-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand" href="contact.html">Контакты</a></li>
+      </ul>
     </nav>
+
+    <a href="contact.html" class="hidden rounded-md bg-brand px-4 py-2.5 text-[15px] font-semibold text-white hover:bg-brand-dark focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand md:inline-flex">Заказать демонстрацию</a>
+
+    <button id="menu-btn" type="button" aria-expanded="false" aria-controls="mobile-nav" class="rounded-md border border-line px-3.5 py-2 text-[15px] font-medium text-ink md:hidden">Меню</button>
   </div>
+  <nav id="mobile-nav" aria-label="Мобильная навигация" class="hidden border-t border-line bg-white md:hidden">
+    <ul class="mx-auto max-w-6xl px-5 py-2 text-base font-medium sm:px-8">
+      <li><a class="block py-3" href="b2g-government.html">Администрациям</a></li>
+      <li><a class="block py-3" href="b2b-studio.html">Бизнесу</a></li>
+      <li><a class="block py-3" href="calculator.html">Калькулятор</a></li>
+      <li><a class="block py-3" href="blog/index.html">Блог</a></li>
+      <li><a class="block py-3" href="contact.html">Контакты</a></li>
+      <li><a class="my-2 block rounded-md bg-brand px-4 py-3 text-center font-semibold text-white" href="contact.html">Заказать демонстрацию</a></li>
+    </ul>
+  </nav>
 </header>
 
-<main>
-  <div class="wrap">
+<main id="main">
 
-    <section class="hero">
-      <h1>Локальный ИИ для администраций и бизнеса на северо-востоке Башкортостана</h1>
-      <p class="lead">Цифровые ассистенты, которые работают на вашем оборудовании, отвечают по вашим документам и не отправляют данные в облако. ИТ-центр в с. Месягутово, Дуванский район.</p>
-      <div class="cta-row">
-        <a class="btn primary" href="b2g-government.html">Для администраций</a>
-        <a class="btn" href="b2b-studio.html">Для бизнеса</a>
-        <a class="btn" href="calculator.html">Рассчитать эффект</a>
+  <!-- Первый экран -->
+  <section class="border-b border-line bg-surface">
+    <div class="mx-auto grid max-w-6xl items-center gap-12 px-5 py-14 sm:px-8 md:py-20 lg:grid-cols-[1.1fr_0.9fr]">
+      <div>
+        <h1 class="max-w-3xl text-4xl font-bold leading-[1.1] tracking-tight text-ink sm:text-5xl">Локальный ИИ для администраций и бизнеса на северо-востоке Башкортостана</h1>
+        <p class="mt-6 max-w-xl text-lg leading-relaxed text-muted">Автономная цифровая инфраструктура вне облака: ассистент работает на вашем оборудовании, отвечает по вашим документам, а данные остаются у вас.</p>
+        <div class="mt-8 flex flex-wrap items-center gap-3">
+          <a href="b2g-government.html" class="inline-flex rounded-md bg-bash px-5 py-3 font-semibold text-white hover:bg-bash-dark focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-bash">Для администраций</a>
+          <a href="b2b-studio.html" class="inline-flex rounded-md bg-brand px-5 py-3 font-semibold text-white hover:bg-brand-dark focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand">Для бизнеса</a>
+          <a href="calculator.html" class="inline-flex rounded-md border border-line bg-white px-5 py-3 font-semibold text-ink hover:border-muted focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand">Рассчитать эффект</a>
+        </div>
+        <p class="mt-6 max-w-xl text-[15px] text-muted">Закон № 243-ФЗ от 26.07.2026 и сроки до 1 марта 2027 года: <a href="#zakon" class="font-medium text-brand underline underline-offset-2 hover:text-brand-dark">что это значит для вас</a>.</p>
       </div>
-    </section>
 
-    <section class="section" id="uslugi">
-      <h2>Два направления</h2>
-      <div class="grid two">
-        <article class="card">
-          <h3>Администрациям, МУП, ЖКХ, школам</h3>
-          <p>Локальный ИИ-справочник отвечает жителям на типовые вопросы: график приёма, контакты служб, расписания, афиши, порядок получения справок. Ответ даётся по вашим документам, со ссылкой на источник. Если данных нет, справочник так и говорит.</p>
-          <p><a class="btn primary" href="b2g-government.html">Подробнее для администраций</a></p>
+      <!-- Пример ответа справочника -->
+      <figure aria-label="Условный пример диалога со справочником" class="rounded-xl border border-line bg-white p-5 shadow-sm sm:p-6">
+        <figcaption class="mb-4 text-[15px] font-semibold text-ink">Как отвечает справочник</figcaption>
+
+        <div class="flex justify-end">
+          <p class="max-w-[85%] rounded-lg bg-brand-soft px-4 py-3 text-[15px] text-ink">Когда принимает глава поселения?</p>
+        </div>
+        <div class="mt-3 max-w-[92%] rounded-lg border border-line border-l-4 border-l-bash bg-white px-4 py-3">
+          <p class="text-[15px] text-ink">Приём граждан проходит по вторникам с 10:00 до 12:00 в здании администрации.</p>
+          <p class="mt-2 text-sm text-muted">Источник: документ «График приёма граждан»</p>
+        </div>
+
+        <div class="mt-6 flex justify-end">
+          <p class="max-w-[85%] rounded-lg bg-brand-soft px-4 py-3 text-[15px] text-ink">Когда отключат воду на моей улице?</p>
+        </div>
+        <div class="mt-3 max-w-[92%] rounded-lg border border-line border-l-4 border-l-slate-400 bg-white px-4 py-3">
+          <p class="text-[15px] text-ink">В загруженных документах нет информации по этому вопросу. Уточните в приёмной администрации.</p>
+          <p class="mt-2 text-sm text-muted">Справочник не выдумывает ответ</p>
+        </div>
+
+        <p class="mt-5 border-t border-line pt-3 text-sm text-muted">Пример условный, данные вымышленные.</p>
+      </figure>
+    </div>
+  </section>
+
+  <!-- Два направления -->
+  <section id="uslugi" class="scroll-mt-20">
+    <div class="mx-auto max-w-6xl px-5 py-16 sm:px-8 md:py-20">
+      <h2 class="text-3xl font-bold tracking-tight text-ink">Два направления</h2>
+      <div class="mt-10 grid gap-10 md:grid-cols-2">
+
+        <article class="border-t-4 border-bash pt-6">
+          <h3 class="text-xl font-bold text-ink">Администрациям, МУП, ЖКХ и школам</h3>
+          <p class="mt-4 max-w-prose text-[17px] leading-relaxed text-muted">Справочник берёт на себя рутину обращений жителей: график приёма, контакты служб, афиши, регламенты справок. Безопасные ответы круглосуточно и только по официальным документам.</p>
+          <p class="mt-4 max-w-prose text-[17px] leading-relaxed text-muted">По нашей оценке, до 40% рабочего времени сотрудников уходит на типовые вопросы. Какую долю закроет справочник у вас, измеряем на пилоте.</p>
+          <a href="b2g-government.html" class="mt-6 inline-flex rounded-md bg-bash px-5 py-3 font-semibold text-white hover:bg-bash-dark focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-bash">Страница для администраций</a>
         </article>
-        <article class="card">
-          <h3>Коммерческим организациям</h3>
-          <p>ИИ-ассистенты под ваши процессы: поиск по внутренней базе знаний для сотрудников, консультации клиентов в Telegram и VK, запись и календарь. Настраиваем на ваших данных, а не на общих шаблонах.</p>
-          <p><a class="btn" href="b2b-studio.html">Подробнее для бизнеса</a></p>
+
+        <article class="border-t-4 border-brand pt-6">
+          <h3 class="text-xl font-bold text-ink">Коммерческим организациям</h3>
+          <p class="mt-4 max-w-prose text-[17px] leading-relaxed text-muted">ИИ-агенты и ассистенты под ваши процессы: база знаний для сотрудников, консультации клиентов в Telegram и VK, запись и календарь. Настраиваем на ваших данных, а не на общих шаблонах.</p>
+          <p class="mt-4 max-w-prose text-[17px] leading-relaxed text-muted">Цель внедрения — снизить операционные затраты. Ориентир до 30% не гарантия: фактический результат фиксируем на пилоте.</p>
+          <a href="b2b-studio.html" class="mt-6 inline-flex rounded-md bg-brand px-5 py-3 font-semibold text-white hover:bg-brand-dark focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand">Страница для бизнеса</a>
         </article>
+
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="section" id="demo">
-      <h2>Попробовать на ваших документах</h2>
-      <p class="sub">Демонстрация занимает 30–45 минут, лично или онлайн. Вы выбираете несколько реальных документов и видите, как меняются ответы после загрузки.</p>
-      <a class="btn primary" href="contact.html">Заказать демонстрацию</a>
-    </section>
+  <!-- Блок доверия -->
+  <section class="border-y border-line bg-surface">
+    <div class="mx-auto max-w-6xl px-5 py-16 sm:px-8 md:py-20">
+      <h2 class="text-3xl font-bold tracking-tight text-ink">ИТ-центр в селе Месягутово</h2>
+      <p class="mt-4 max-w-2xl text-[17px] leading-relaxed text-muted">Локальный ИИ-узел ИТ-центра развёрнут в с. Месягутово, Дуванский район. Мы ориентированы на администрации, МУП, ЖКХ, школы и коммерческие организации северо-востока Башкортостана.</p>
 
-    <section class="section">
-      <h2>Почему локально</h2>
-      <div class="grid three">
-        <article class="card"><h3>Данные остаются у вас</h3><p>Документы и вопросы хранятся и обрабатываются на вашем оборудовании на территории России.</p></article>
-        <article class="card"><h3>Работает без интернета</h3><p>Сам справочник отвечает и при нестабильной связи. Для сельских территорий это важно.</p></article>
-        <article class="card"><h3>Не привязан к чужим дата-центрам</h3><p>11 октября 2026 года Yandex Cloud сообщил о полной остановке своего дата-центра во Владимире, часть сервисов компании стала недоступна (<a href="https://ria.ru/20261011/rabota-2123759292.html" target="_blank" rel="noopener">РИА Новости</a>). Локальная система от доступности одного облачного провайдера не зависит.</p></article>
+      <div class="mt-10 grid gap-8 md:grid-cols-3">
+        <div class="border-l-4 border-bash pl-5">
+          <h3 class="text-lg font-bold text-ink">Данные остаются у вас</h3>
+          <p class="mt-2 leading-relaxed text-muted">Документы и вопросы хранятся и обрабатываются на вашем оборудовании на территории России.</p>
+        </div>
+        <div class="border-l-4 border-bash pl-5">
+          <h3 class="text-lg font-bold text-ink">Работает без интернета</h3>
+          <p class="mt-2 leading-relaxed text-muted">Сам справочник отвечает и при нестабильной связи. Для сельских территорий это важно.</p>
+        </div>
+        <div class="border-l-4 border-bash pl-5">
+          <h3 class="text-lg font-bold text-ink">Не зависит от одного облака</h3>
+          <p class="mt-2 leading-relaxed text-muted">11 октября 2026 года Yandex Cloud сообщил о полной остановке дата-центра во Владимире, часть сервисов компании стала недоступна (<a class="text-brand underline underline-offset-2" href="https://ria.ru/20261011/rabota-2123759292.html" target="_blank" rel="noopener">РИА Новости</a>). Локальная система от доступности одного облачного провайдера не зависит.</p>
+        </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="section" id="cena">
-      <h2>Пилот для администрации</h2>
-      <div class="grid two">
-        <article class="card"><div class="price">150 000 ₽</div><p>разово. Установка на ваше оборудование, загрузка до 50 документов, настройка одного канала для жителей и проверка на 30–50 типовых вопросах. Запуск за 10–20 рабочих дней после получения материалов.</p></article>
-        <article class="card"><div class="price">30 000 ₽ в месяц</div><p>сопровождение: обновление базы знаний и техническая поддержка.</p></article>
+  <!-- Демонстрация -->
+  <section id="demo" class="scroll-mt-20">
+    <div class="mx-auto max-w-6xl px-5 py-16 sm:px-8 md:py-20">
+      <div class="max-w-2xl">
+        <h2 class="text-3xl font-bold tracking-tight text-ink">Попробовать на ваших документах</h2>
+        <p class="mt-4 text-[17px] leading-relaxed text-muted">Демонстрация занимает 30–45 минут, лично или онлайн. Вы выбираете несколько реальных документов и видите, как меняются ответы после загрузки.</p>
+        <a href="contact.html" class="mt-6 inline-flex rounded-md bg-brand px-5 py-3 font-semibold text-white hover:bg-brand-dark focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand">Заказать демонстрацию</a>
       </div>
-      <p class="fine">Для бизнеса стоимость зависит от сценария, ориентир называем после разбора процессов за 45 минут. <a href="b2b-studio.html">Как это устроено</a>.</p>
-    </section>
+    </div>
+  </section>
 
-    <section class="section">
-      <h2>Закон об ИИ и сроки</h2>
-      <div class="notice">
-        <p>Федеральный закон от 26.07.2026 № 243-ФЗ «О поддержке развития технологий искусственного интеллекта в Российской Федерации» действует с 1 сентября 2026 года, часть его норм вступает в силу 1 марта 2027 года. Закон регулирует большие фундаментальные модели ИИ. Что из этого важно для администрации, разобрано <a href="b2g-government.html#zakon">на странице для администраций</a>.</p>
+  <!-- Стоимость пилота -->
+  <section id="cena" class="scroll-mt-20 border-y border-line bg-surface">
+    <div class="mx-auto max-w-6xl px-5 py-16 sm:px-8 md:py-20">
+      <h2 class="text-3xl font-bold tracking-tight text-ink">Пилот для администрации</h2>
+      <p class="mt-3 max-w-2xl text-[17px] leading-relaxed text-muted">Запуск за 10–20 рабочих дней после получения материалов.</p>
+
+      <div class="mt-10 grid gap-6 md:grid-cols-2">
+        <div class="rounded-xl border border-line bg-white p-7">
+          <p class="text-4xl font-bold tracking-tight text-ink">150 000 ₽</p>
+          <p class="mt-1 text-muted">разово</p>
+          <ul class="mt-5 space-y-2 text-[17px] leading-relaxed text-ink">
+            <li>Установка на ваше оборудование</li>
+            <li>Загрузка до 50 документов</li>
+            <li>Настройка одного канала для жителей</li>
+            <li>Проверка на 30–50 тестовых вопросах жителей</li>
+          </ul>
+        </div>
+        <div class="rounded-xl border border-line bg-white p-7">
+          <p class="text-4xl font-bold tracking-tight text-ink">30 000 ₽</p>
+          <p class="mt-1 text-muted">в месяц</p>
+          <p class="mt-5 text-[17px] leading-relaxed text-ink">Сопровождение: обновление базы знаний и техническая поддержка.</p>
+        </div>
       </div>
-    </section>
+      <p class="mt-6 max-w-2xl text-[15px] text-muted">Для бизнеса стоимость зависит от сценария. Ориентир называем после разбора процессов за 45 минут: <a class="text-brand underline underline-offset-2" href="b2b-studio.html">как это устроено</a>.</p>
+    </div>
+  </section>
 
-    <section class="section">
-      <h2>Из блога</h2>
-      <ul class="entries">
-        <li class="entry"><a class="t" href="blog/lokalnyy-ii-chto-eto-i-pochemu-nuzhen.html">Локальный ИИ: что это и почему он нужен вне облака</a></li>
-        <li class="entry"><a class="t" href="blog/lokalnyy-ii-vs-chatgpt.html">Чем локальный ИИ-справочник отличается от обычного ChatGPT</a></li>
-        <li class="entry"><a class="t" href="blog/top-5-oshibok-pri-vnedrenii-ii-v-administratsiyu.html">Топ-5 ошибок при внедрении ИИ в административный орган</a></li>
+  <!-- Закон об ИИ -->
+  <section id="zakon" class="scroll-mt-20">
+    <div class="mx-auto max-w-6xl px-5 py-16 sm:px-8 md:py-20">
+      <h2 class="text-3xl font-bold tracking-tight text-ink">Закон об ИИ и сроки</h2>
+      <div class="mt-6 max-w-3xl space-y-4 text-[17px] leading-relaxed text-muted">
+        <p>Федеральный закон от 26.07.2026 № 243-ФЗ «О поддержке развития технологий искусственного интеллекта в Российской Федерации» действует с 1 сентября 2026 года, часть его норм вступает в силу 1 марта 2027 года. Закон регулирует большие фундаментальные модели ИИ.</p>
+        <p>Часть 3 статьи 13 предусматривает переходный период до 1 сентября 2032 года для информационных систем с такими моделями, которые созданы или эксплуатируются на 1 марта 2027 года, при условии обработки и хранения данных на территории России. Он касается будущих случаев, где допустимы только суверенные и национальные модели; сами случаи Правительство ещё не определило.</p>
+        <p class="rounded-md border-l-4 border-bash bg-bash-soft px-5 py-4 text-ink">Практический вывод: норма привязана к системам, которые уже работают на 1 марта 2027 года. Если вы планируете ИИ-справочник, пилот разумно запустить до этой даты.</p>
+        <p class="text-[15px]">Информация справочная и не является юридической консультацией: применимость к вашей системе уточняйте у юриста.</p>
+      </div>
+      <details class="mt-6 max-w-3xl rounded-md border border-line px-5 py-4">
+        <summary class="cursor-pointer font-semibold text-ink">Источники</summary>
+        <ul class="mt-3 space-y-2 text-[15px] text-muted">
+          <li><a class="text-brand underline underline-offset-2" href="https://base.garant.ru/414652934/4d6cc5b8235f826b2c67847b967f8695/" target="_blank" rel="noopener">Статья 13 закона № 243-ФЗ, ГАРАНТ</a>, дата обращения 18.10.2026</li>
+          <li><a class="text-brand underline underline-offset-2" href="https://base.garant.ru/414652934/" target="_blank" rel="noopener">Федеральный закон от 26.07.2026 № 243-ФЗ, ГАРАНТ</a>, дата обращения 18.10.2026</li>
+        </ul>
+      </details>
+    </div>
+  </section>
+
+  <!-- Блог -->
+  <section class="border-t border-line bg-surface">
+    <div class="mx-auto max-w-6xl px-5 py-16 sm:px-8 md:py-20">
+      <h2 class="text-3xl font-bold tracking-tight text-ink">Из блога</h2>
+      <ul class="mt-8 max-w-3xl divide-y divide-line border-y border-line">
+        <li><a class="block py-4 text-lg font-semibold text-ink hover:text-brand" href="blog/lokalnyy-ii-chto-eto-i-pochemu-nuzhen.html">Локальный ИИ: что это и почему он нужен вне облака</a></li>
+        <li><a class="block py-4 text-lg font-semibold text-ink hover:text-brand" href="blog/lokalnyy-ii-vs-chatgpt.html">Чем локальный ИИ-справочник отличается от обычного ChatGPT</a></li>
+        <li><a class="block py-4 text-lg font-semibold text-ink hover:text-brand" href="blog/top-5-oshibok-pri-vnedrenii-ii-v-administratsiyu.html">Топ-5 ошибок при внедрении ИИ в административный орган</a></li>
       </ul>
-      <p><a class="btn" href="blog/index.html">Все статьи блога</a></p>
-    </section>
+      <a href="blog/index.html" class="mt-6 inline-flex rounded-md border border-line bg-white px-5 py-3 font-semibold text-ink hover:border-muted focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand">Все статьи блога</a>
+    </div>
+  </section>
 
-    <section class="section" id="kontakty">
-      <h2>Контакты</h2>
-      <div class="card">
-        <p><strong>Матвей Харитонов</strong><br>с. Месягутово, Дуванский район, Республика Башкортостан<br><a href="tel:+79177464295">+7 917 746-42-95</a><br><a href="mailto:zames.78@mail.ru">zames.78@mail.ru</a></p>
-        <p><a class="btn primary" href="contact.html">Написать или записаться на демонстрацию</a></p>
+  <!-- Контакты -->
+  <section id="kontakty" class="scroll-mt-20">
+    <div class="mx-auto grid max-w-6xl gap-10 px-5 py-16 sm:px-8 md:grid-cols-2 md:py-20">
+      <div>
+        <h2 class="text-3xl font-bold tracking-tight text-ink">Контакты</h2>
+        <p class="mt-4 max-w-md text-[17px] leading-relaxed text-muted">Расскажите о задаче. Предложим формат: демонстрацию на ваших документах для администрации или разбор процессов для бизнеса.</p>
+        <a href="contact.html" class="mt-6 inline-flex rounded-md bg-brand px-5 py-3 font-semibold text-white hover:bg-brand-dark focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand">Написать или записаться</a>
       </div>
-    </section>
-  </div>
+      <address class="not-italic">
+        <p class="text-xl font-bold text-ink">Матвей Харитонов</p>
+        <p class="mt-2 text-[17px] text-muted">с. Месягутово, Дуванский район, Республика Башкортостан</p>
+        <p class="mt-4 text-[17px]"><a class="font-semibold text-brand hover:text-brand-dark" href="tel:+79177464295">+7 917 746-42-95</a></p>
+        <p class="mt-1 text-[17px]"><a class="font-semibold text-brand hover:text-brand-dark" href="mailto:zames.78@mail.ru">zames.78@mail.ru</a></p>
+      </address>
+    </div>
+  </section>
+
 </main>
 
-<footer>
-  <div class="wrap">
-    <span>© Planeta Ladariya · Матвей Харитонов · с. Месягутово, Дуванский район, Республика Башкортостан</span>
-    <a href="tel:+79177464295">+7 917 746-42-95</a>
-    <a href="mailto:zames.78@mail.ru">zames.78@mail.ru</a>
-    <a href="blog/index.html">Блог</a>
+<footer class="border-t border-line bg-surface">
+  <div class="mx-auto flex max-w-6xl flex-col gap-4 px-5 py-8 text-[15px] text-muted sm:px-8 md:flex-row md:items-center md:justify-between">
+    <p>© Planeta Ladariya, Матвей Харитонов, с. Месягутово</p>
+    <p class="flex flex-wrap gap-x-6 gap-y-1">
+      <a class="hover:text-ink" href="tel:+79177464295">+7 917 746-42-95</a>
+      <a class="hover:text-ink" href="mailto:zames.78@mail.ru">zames.78@mail.ru</a>
+      <a class="hover:text-ink" href="blog/index.html">Блог</a>
+    </p>
   </div>
 </footer>
 
+<script>
+  (function () {
+    var btn = document.getElementById('menu-btn');
+    var nav = document.getElementById('mobile-nav');
+    if (!btn || !nav) return;
+    btn.addEventListener('click', function () {
+      var open = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', String(!open));
+      nav.classList.toggle('hidden');
+    });
+  })();
+</script>
 </body>
 </html>

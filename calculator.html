@@ -1,20 +1,42 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" class="scroll-smooth">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
+<meta name="theme-color" content="#ffffff">
 <title>Калькулятор экономии от ИИ-ассистента | Planeta Ladariya</title>
-<meta name="description" content="Оцените, сколько часов и денег может высвободить ИИ-ассистент в вашей организации. Все допущения видны и меняются, расчёт ориентировочный.">
+<meta name="description" content="Оцените, сколько рабочего времени и денег высвободит ИИ-ассистент в вашей организации. Все допущения видны и меняются, расчёт ориентировочный.">
 <link rel="canonical" href="https://planeta-ladariya.online/calculator.html">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Калькулятор экономии от ИИ-ассистента | Planeta Ladariya">
-<meta property="og:description" content="Оцените, сколько часов и денег может высвободить ИИ-ассистент в вашей организации. Все допущения видны и меняются, расчёт ориентировочный.">
+<meta property="og:description" content="Оцените, сколько рабочего времени и денег высвободит ИИ-ассистент в вашей организации. Все допущения видны и меняются, расчёт ориентировочный.">
 <meta property="og:url" content="https://planeta-ladariya.online/calculator.html">
 <meta property="og:locale" content="ru_RU">
-<meta name="theme-color" content="#F1F3EE">
-<link rel="stylesheet" href="assets/css/site.css">
-<link rel="stylesheet" href="assets/css/portal.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700&display=swap">
+<script src="https://cdn.tailwindcss.com/3.4.17"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        fontFamily: { sans: ['"Golos Text"', 'ui-sans-serif', 'system-ui', '"Segoe UI"', 'Roboto', 'Arial', 'sans-serif'] },
+        colors: {
+          ink: '#12263A',
+          muted: '#51657A',
+          line: '#D6DEE6',
+          surface: '#F3F6F8',
+          brand: { DEFAULT: '#1D4F91', dark: '#173F74', soft: '#E6EEF8' },
+          bash: { DEFAULT: '#1B7F5C', dark: '#146347', soft: '#E3F2EC' }
+        }
+      }
+    }
+  }
+</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Главная", "item": "https://planeta-ladariya.online/"}, {"@type": "ListItem", "position": 2, "name": "Калькулятор", "item": "https://planeta-ladariya.online/calculator.html"}]}</script>
+
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript">
     (function(m,e,t,r,i,k,a){
@@ -29,117 +51,573 @@
 <noscript><div><img src="https://mc.yandex.ru/watch/112808220" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 <!-- /Yandex.Metrika counter -->
 </head>
-<body>
 
-<header class="top">
-  <div class="wrap">
-    <a class="brand" href="index.html">Planeta Ladariya</a>
-    <nav aria-label="Основная навигация">
-      <a href="b2g-government.html">Администрациям</a><a href="b2b-studio.html">Бизнесу</a><a href="calculator.html" aria-current="page">Калькулятор</a><a href="blog/index.html">Блог</a><a href="contact.html">Контакты</a>
+<body class="bg-white font-sans text-ink antialiased">
+<a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:left-3 focus:top-3 focus:z-50 focus:rounded-md focus:bg-white focus:px-4 focus:py-2 focus:text-brand focus:shadow">К основному содержимому</a>
+
+<!-- Шапка -->
+<header class="sticky top-0 z-40 border-b border-line bg-white/95 backdrop-blur">
+  <div class="mx-auto flex max-w-6xl items-center justify-between gap-4 px-5 py-3.5 sm:px-8">
+    <a href="index.html" class="text-lg font-bold tracking-tight text-ink">Planeta Ladariya</a>
+
+    <nav id="site-nav" aria-label="Основная навигация" class="hidden md:block">
+      <ul class="flex items-center gap-7 text-[15px] font-medium text-muted">
+        <li><a class="hover:text-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand" href="b2g-government.html">Администрациям</a></li>
+        <li><a class="hover:text-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand" href="b2b-studio.html">Бизнесу</a></li>
+        <li><a aria-current="page" class="border-b-2 border-brand pb-1 text-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand" href="calculator.html">Калькулятор</a></li>
+        <li><a class="hover:text-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand" href="blog/index.html">Блог</a></li>
+        <li><a class="hover:text-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand" href="contact.html">Контакты</a></li>
+      </ul>
     </nav>
+
+    <a href="contact.html" class="hidden rounded-md bg-brand px-4 py-2.5 text-[15px] font-semibold text-white hover:bg-brand-dark focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand md:inline-flex">Заказать демонстрацию</a>
+
+    <button id="menu-btn" type="button" aria-expanded="false" aria-controls="mobile-nav" class="rounded-md border border-line px-3.5 py-2 text-[15px] font-medium text-ink md:hidden">Меню</button>
   </div>
+  <nav id="mobile-nav" aria-label="Мобильная навигация" class="hidden border-t border-line bg-white md:hidden">
+    <ul class="mx-auto max-w-6xl px-5 py-2 text-base font-medium sm:px-8">
+      <li><a class="block py-3" href="b2g-government.html">Администрациям</a></li>
+      <li><a class="block py-3" href="b2b-studio.html">Бизнесу</a></li>
+      <li><a class="block py-3" href="calculator.html">Калькулятор</a></li>
+      <li><a class="block py-3" href="blog/index.html">Блог</a></li>
+      <li><a class="block py-3" href="contact.html">Контакты</a></li>
+      <li><a class="my-2 block rounded-md bg-brand px-4 py-3 text-center font-semibold text-white" href="contact.html">Заказать демонстрацию</a></li>
+    </ul>
+  </nav>
 </header>
 
-<main>
-  <div class="wrap">
+<main id="main">
 
-    <section class="hero">
-      <h1>Калькулятор экономии от ИИ-ассистента</h1>
-      <p class="lead">Оцените, сколько рабочего времени и денег может высвободить ассистент в вашей организации. Все допущения видны и меняются: расчёт ориентировочный и не является обещанием результата.</p>
-    </section>
+  <section class="border-b border-line bg-surface">
+    <div class="mx-auto max-w-6xl px-5 py-12 sm:px-8 md:py-16">
+      <h1 class="max-w-3xl text-4xl font-bold leading-[1.1] tracking-tight text-ink sm:text-5xl">Калькулятор: сколько времени и денег высвободит ИИ-ассистент</h1>
+      <p class="mt-5 max-w-2xl text-lg leading-relaxed text-muted">Выберите сферу, укажите численность и при желании поправьте зарплаты и доли времени по ролям. Расчёт показывает порядок величины: это оценка по вашим допущениям, а не смета и не обещание результата.</p>
+      <noscript><p class="mt-4 rounded-md border border-line bg-white p-4 text-ink">Для расчёта нужен включённый JavaScript.</p></noscript>
+    </div>
+  </section>
 
-    <section class="section">
-      <div class="calc">
-        <form id="calc-form" class="card form-grid" onsubmit="return false" aria-label="Параметры расчёта">
-          <label>Сфера деятельности
-            <select id="sphere">
-              <option value="services">Консалтинг и услуги</option>
-              <option value="trade">Торговля</option>
-              <option value="agro">АПК</option>
-            </select>
+  <!-- Шаг 1 -->
+  <section class="mx-auto max-w-6xl px-5 pt-12 sm:px-8">
+    <h2 class="text-2xl font-bold tracking-tight text-ink">Шаг 1. Сфера деятельности</h2>
+    <fieldset class="mt-5">
+      <legend class="sr-only">Сфера деятельности</legend>
+      <div class="grid gap-3 sm:grid-cols-2 lg:grid-cols-5">
+          <label class="block cursor-pointer">
+            <input type="radio" name="sector" value="admin" class="peer sr-only" checked>
+            <span class="block h-full rounded-lg border border-line bg-white p-4 peer-checked:border-brand peer-checked:bg-brand-soft peer-focus-visible:outline peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-brand">
+              <span class="block font-semibold text-ink">Администрация, МУП, ЖКХ</span>
+              <span class="mt-1 block text-sm text-muted">Районы, поселения, муниципальные предприятия</span>
+            </span>
           </label>
-          <label>Количество сотрудников: <output id="emp-out">50</output>
-            <input id="emp" type="range" min="5" max="500" step="5" value="50">
+          <label class="block cursor-pointer">
+            <input type="radio" name="sector" value="school" class="peer sr-only">
+            <span class="block h-full rounded-lg border border-line bg-white p-4 peer-checked:border-brand peer-checked:bg-brand-soft peer-focus-visible:outline peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-brand">
+              <span class="block font-semibold text-ink">Школа, колледж, учреждение</span>
+              <span class="mt-1 block text-sm text-muted">Образование, культура, медицина</span>
+            </span>
           </label>
-          <label>Средняя зарплата до налогов, ₽ в месяц
-            <input id="salary" type="number" min="10000" step="1000" value="70000">
+          <label class="block cursor-pointer">
+            <input type="radio" name="sector" value="trade" class="peer sr-only">
+            <span class="block h-full rounded-lg border border-line bg-white p-4 peer-checked:border-brand peer-checked:bg-brand-soft peer-focus-visible:outline peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-brand">
+              <span class="block font-semibold text-ink">Торговля</span>
+              <span class="mt-1 block text-sm text-muted">Магазины, опт, интернет-торговля</span>
+            </span>
           </label>
-          <label>Часов в неделю, которые ассистент высвобождает на одного сотрудника
-            <input id="hours" type="number" min="0" max="40" step="0.5" value="3">
+          <label class="block cursor-pointer">
+            <input type="radio" name="sector" value="services" class="peer sr-only">
+            <span class="block h-full rounded-lg border border-line bg-white p-4 peer-checked:border-brand peer-checked:bg-brand-soft peer-focus-visible:outline peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-brand">
+              <span class="block font-semibold text-ink">Услуги и сервис</span>
+              <span class="mt-1 block text-sm text-muted">Клиники, салоны, мастерские, консалтинг</span>
+            </span>
           </label>
-          <label>Надбавка на взносы и накладные расходы, %
-            <input id="overhead" type="number" min="0" max="100" step="1" value="30">
+          <label class="block cursor-pointer">
+            <input type="radio" name="sector" value="agro" class="peer sr-only">
+            <span class="block h-full rounded-lg border border-line bg-white p-4 peer-checked:border-brand peer-checked:bg-brand-soft peer-focus-visible:outline peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-brand">
+              <span class="block font-semibold text-ink">АПК</span>
+              <span class="mt-1 block text-sm text-muted">Сельхозпредприятия, переработка</span>
+            </span>
           </label>
-          <label>Стоимость внедрения и сопровождения за первый год, ₽ (необязательно)
-            <input id="cost" type="number" min="0" step="10000" placeholder="например, 600000">
-          </label>
-          <div class="cta-row">
-            <button class="btn" type="button" id="preset-careful">Осторожный: 2 ч в неделю</button>
-            <button class="btn" type="button" id="preset-optimistic">Оптимистичный: 6 ч, 90 000 ₽, +42%</button>
+          
+      </div>
+    </fieldset>
+    <p class="mt-3 max-w-3xl text-[15px] text-muted">Сфера задаёт стартовый шаблон ролей. Шаблон примерный: в нём нет статистики, замените зарплаты и доли времени своими значениями.</p>
+  </section>
+
+  <!-- Шаг 2 -->
+  <section class="mx-auto max-w-6xl px-5 pt-14 sm:px-8">
+    <h2 class="text-2xl font-bold tracking-tight text-ink">Шаг 2. Ваша организация</h2>
+    <div class="mt-6 grid gap-10 lg:grid-cols-2">
+
+      <div class="space-y-6">
+        <div>
+          <div class="flex items-end justify-between gap-4">
+            <label for="emp" class="block text-[15px] font-semibold text-ink">Сотрудников в организации</label>
+            <div class="flex items-center gap-2">
+              <input id="emp-box" type="number" inputmode="numeric" min="1" max="5000" step="1" value="50" class="w-24 rounded-md border border-slate-300 px-3 py-2 text-right tabular-nums" aria-label="Число сотрудников">
+              <span class="text-muted">чел.</span>
+            </div>
           </div>
-          <p class="fine">Стартовые значения по сферам, это допущения, а не статистика: консалтинг и услуги 70 000 ₽ и 3 ч, торговля 55 000 ₽ и 2 ч, АПК 50 000 ₽ и 1,5 ч в неделю. Подставьте свои цифры.</p>
-        </form>
+          <input id="emp" type="range" min="1" max="500" step="1" value="50" class="mt-4 w-full accent-brand">
+          <div class="mt-1 flex justify-between text-sm text-muted"><span>1</span><span>100</span><span>250</span><span>500</span></div>
+        </div>
 
-        <div class="card result" aria-live="polite">
-          <h2>Результат за год</h2>
-          <dl>
-            <div><dt>Возвращается рабочих часов</dt><dd class="big" id="r-hours">—</dd></div>
-            <div><dt>Это эквивалентно полным ставкам</dt><dd class="big" id="r-fte">—</dd></div>
-            <div><dt>Высвобождается фонда оплаты труда с взносами</dt><dd class="big" id="r-money">—</dd></div>
-            <div><dt>Окупаемость внедрения</dt><dd class="big" id="r-payback">—</dd></div>
-            <div><dt>Если эффект окажется вдвое меньше</dt><dd id="r-half">—</dd></div>
-          </dl>
-          <p class="fine">Формула: часов за год = сотрудники × часов в неделю × 50 недель. Ставка = 1 700 часов в год. Стоимость часа = зарплата × 12 × (1 + надбавка) ÷ 1 700.</p>
-          <p><a class="btn primary" id="lead-link" href="contact.html">Записаться на 45-минутный разбор</a></p>
+        <fieldset>
+          <legend class="block text-[15px] font-semibold text-ink">Глубина внедрения</legend>
+          <div class="mt-2 inline-flex divide-x divide-line overflow-hidden rounded-md border border-line bg-white">
+            <label class="cursor-pointer">
+              <input type="radio" name="depth" value="0.5" class="peer sr-only">
+              <span class="block px-4 py-2.5 text-[15px] font-medium text-ink peer-checked:bg-brand peer-checked:text-white peer-focus-visible:outline peer-focus-visible:outline-2 peer-focus-visible:outline-brand">Осторожная</span>
+            </label>
+            <label class="cursor-pointer">
+              <input type="radio" name="depth" value="1" class="peer sr-only" checked>
+              <span class="block px-4 py-2.5 text-[15px] font-medium text-ink peer-checked:bg-brand peer-checked:text-white peer-focus-visible:outline peer-focus-visible:outline-2 peer-focus-visible:outline-brand">Базовая</span>
+            </label>
+            <label class="cursor-pointer">
+              <input type="radio" name="depth" value="1.5" class="peer sr-only">
+              <span class="block px-4 py-2.5 text-[15px] font-medium text-ink peer-checked:bg-brand peer-checked:text-white peer-focus-visible:outline peer-focus-visible:outline-2 peer-focus-visible:outline-brand">Амбициозная</span>
+            </label>
+            
+          </div>
+          <p class="mt-2 max-w-md text-sm text-muted">Осторожная берёт вдвое меньше времени, чем в шаблоне, базовая как в шаблоне, амбициозная в полтора раза больше (не выше 60% на роль).</p>
+        </fieldset>
+      </div>
+
+      <div class="grid gap-5 sm:grid-cols-2">
+        <div>
+          <label for="overhead" class="block text-[15px] font-semibold text-ink">Взносы и накладные, %</label>
+          <input id="overhead" type="number" inputmode="decimal" min="0" max="100" step="1" value="30" class="mt-1.5 w-full rounded-md border border-slate-300 bg-white px-3 py-2.5 text-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand">
+        </div>
+        <div>
+          <label for="ramp" class="block text-[15px] font-semibold text-ink">Эффект в первый год, % от полного</label>
+          <input id="ramp" type="number" inputmode="decimal" min="10" max="100" step="5" value="50" class="mt-1.5 w-full rounded-md border border-slate-300 bg-white px-3 py-2.5 text-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand">
+        </div>
+        <div>
+          <label for="setup" class="block text-[15px] font-semibold text-ink">Внедрение, ₽ разово</label>
+          <input id="setup" type="number" inputmode="numeric" min="0" step="10000" value="150000" class="mt-1.5 w-full rounded-md border border-slate-300 bg-white px-3 py-2.5 text-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand">
+        </div>
+        <div>
+          <label for="support" class="block text-[15px] font-semibold text-ink">Сопровождение, ₽ в месяц</label>
+          <input id="support" type="number" inputmode="numeric" min="0" step="1000" value="30000" class="mt-1.5 w-full rounded-md border border-slate-300 bg-white px-3 py-2.5 text-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand">
+        </div>
+        <div class="sm:col-span-2">
+          <label class="flex items-start gap-2 text-[15px] text-ink"><input id="use-costs" type="checkbox" checked class="mt-1 accent-brand"> Вычесть затраты на внедрение и сопровождение</label>
+          <p id="cost-note" class="mt-2 text-sm text-muted"></p>
         </div>
       </div>
-    </section>
+    </div>
 
-    <section class="section">
-      <div class="notice"><p>Главное допущение расчёта — сколько часов в неделю ассистент реально высвобождает. От него результат зависит сильнее всего. Поэтому мы предлагаем проверить его на пилоте с вашими процессами, а не принимать на веру.</p></div>
-    </section>
-  </div>
+    <div class="mt-10 overflow-x-auto rounded-xl border border-line bg-white p-5">
+      <div class="flex flex-wrap items-center justify-between gap-3">
+        <h3 class="text-lg font-bold text-ink">Роли и допущения</h3>
+        <button id="reset-roles" type="button" class="rounded-md border border-line px-4 py-2 text-[15px] font-medium text-ink hover:border-muted">Сбросить шаблон</button>
+      </div>
+      <table class="mt-4 w-full min-w-[640px] text-left text-[15px]">
+        <thead class="text-sm text-muted">
+          <tr>
+            <th scope="col" class="pb-2 pr-3 font-medium">Роль</th>
+            <th scope="col" class="px-3 pb-2 text-right font-medium">Человек</th>
+            <th scope="col" class="px-3 pb-2 text-right font-medium">Зарплата, ₽ в месяц</th>
+            <th scope="col" class="px-3 pb-2 text-right font-medium">Доля времени, %</th>
+            <th scope="col" class="pb-2 pl-3 text-right font-medium">Экономия, ₽ в год</th>
+          </tr>
+        </thead>
+        <tbody id="roles-body"></tbody>
+      </table>
+      <p class="mt-3 text-sm text-muted">Доля времени: какую часть рабочего времени роли ассистент берёт на себя (типовые вопросы, поиск по документам, первичная обработка). Численность по ролям распределяется по долям шаблона.</p>
+    </div>
+  </section>
+
+  <!-- Шаг 3 -->
+  <section id="result" class="mx-auto max-w-6xl scroll-mt-20 px-5 pt-14 sm:px-8">
+    <h2 class="text-2xl font-bold tracking-tight text-ink">Шаг 3. Результат для <span id="r-employees">50</span> сотрудников</h2>
+
+    <div class="mt-6 grid gap-6 lg:grid-cols-[1.1fr_0.9fr]" aria-live="polite">
+      <div class="rounded-xl border border-line bg-surface p-7">
+        <p class="text-[15px] text-muted">Высвобождается в год при полном эффекте</p>
+        <p id="r-saving" class="mt-2 text-5xl font-bold tracking-tight text-brand sm:text-6xl">—</p>
+        <p class="mt-4 text-[15px] leading-relaxed text-muted">Это стоимость времени, которое освобождается у сотрудников, с учётом взносов и накладных. Для сравнения, весь фонд оплаты труда по шаблону: <span id="r-fund" class="font-semibold text-ink">—</span> в год. Высвобожденное время не означает сокращений: люди переключаются на сложные обращения и задачи, на которые раньше не хватало рук.</p>
+      </div>
+
+      <dl class="grid grid-cols-2 gap-4">
+        <div class="rounded-xl border border-line p-5"><dt class="text-sm text-muted">Возвращается часов в год</dt><dd id="r-hours" class="mt-1 text-2xl font-bold text-ink">—</dd></div>
+        <div class="rounded-xl border border-line p-5"><dt class="text-sm text-muted">Это эквивалентно</dt><dd id="r-fte" class="mt-1 text-2xl font-bold text-ink">—</dd></div>
+        <div class="rounded-xl border border-line p-5"><dt class="text-sm text-muted">Итог первого года</dt><dd id="r-net1" class="mt-1 text-xl font-bold text-ink">—</dd></div>
+        <div class="rounded-xl border border-line p-5"><dt class="text-sm text-muted">Итог за 3 года</dt><dd id="r-net3" class="mt-1 text-xl font-bold text-ink">—</dd></div>
+        <div class="col-span-2 rounded-xl border border-line p-5"><dt class="text-sm text-muted">Окупаемость внедрения</dt><dd id="r-payback" class="mt-1 text-2xl font-bold text-ink">—</dd></div>
+      </dl>
+    </div>
+    <p id="r-half" class="mt-4 max-w-3xl text-[15px] text-muted"></p>
+
+    <details class="mt-8 rounded-lg border border-line bg-white px-5 py-4">
+      <summary class="cursor-pointer font-semibold text-ink">Как это посчитано</summary>
+      <div class="mt-3 max-w-3xl space-y-3 text-[15px] leading-relaxed text-muted">
+        <p>Для каждой роли: фонд оплаты = человек × зарплата × 12 × (1 + надбавка). Экономия при полном эффекте = фонд оплаты × доля времени × глубина внедрения. Часы = человек × 1 700 × доля времени × глубина. Полная ставка принимается за 1 700 часов в год.</p>
+        <p>Первый год считается с коэффициентом «эффект в первый год», дальше с полным эффектом. Из результата вычитаются разовая стоимость внедрения и ежемесячное сопровождение. Окупаемость это первый месяц, когда накопленный итог становится неотрицательным, горизонт 5 лет.</p>
+        <p>Чего расчёт не знает: вашего штатного расписания, реальных окладов и того, насколько типовые вопросы у вас формализованы. Доли времени в шаблоне наши допущения, а не результаты исследования. Реальное значение мы измеряем на пилоте.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- Шаг 4 -->
+  <section id="razbor" class="mt-16 scroll-mt-20 border-t border-line bg-surface">
+    <div class="mx-auto grid max-w-6xl gap-10 px-5 py-14 sm:px-8 lg:grid-cols-2">
+      <div>
+        <h2 class="text-2xl font-bold tracking-tight text-ink">Шаг 4. Разбор на ваших данных</h2>
+        <p class="mt-4 max-w-md text-[17px] leading-relaxed text-muted">45 минут с Матвеем Харитоновым: проверим допущения на ваших процессах и документах и подскажем, с какого сценария начать пилот.</p>
+        <p class="mt-4 text-[15px] text-muted">Ваш расчёт автоматически добавится к заявке.</p>
+      </div>
+
+      <form id="lead-form" action="https://formspree.io/f/mvkojkgp" method="post" class="rounded-xl border border-line bg-white p-6">
+        <div class="grid gap-4">
+          <div><label for="f-name" class="block text-[15px] font-semibold text-ink">Имя</label><input id="f-name" name="name" type="text" autocomplete="name" required class="mt-1.5 w-full rounded-md border border-slate-300 bg-white px-3 py-2.5 text-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand"></div>
+          <div><label for="f-phone" class="block text-[15px] font-semibold text-ink">Телефон</label><input id="f-phone" name="phone" type="tel" autocomplete="tel" placeholder="+7" class="mt-1.5 w-full rounded-md border border-slate-300 bg-white px-3 py-2.5 text-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand"></div>
+          <div><label for="f-email" class="block text-[15px] font-semibold text-ink">Электронная почта</label><input id="f-email" name="email" type="email" autocomplete="email" required class="mt-1.5 w-full rounded-md border border-slate-300 bg-white px-3 py-2.5 text-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand"></div>
+          <div><label for="f-org" class="block text-[15px] font-semibold text-ink">Организация (необязательно)</label><input id="f-org" name="organization" type="text" autocomplete="organization" class="mt-1.5 w-full rounded-md border border-slate-300 bg-white px-3 py-2.5 text-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand"></div>
+          <input id="calc-summary" name="calc_summary" type="hidden" value="">
+          <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" class="hidden" aria-hidden="true">
+          <label class="flex items-start gap-2 text-[15px] text-ink"><input type="checkbox" name="consent" value="yes" required class="mt-1 accent-brand"> Согласен на обработку персональных данных для ответа на заявку</label>
+          <button id="lead-btn" type="submit" class="rounded-md bg-brand px-5 py-3 font-semibold text-white hover:bg-brand-dark disabled:opacity-60 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand">Записаться на разбор</button>
+          <p id="lead-status" role="status" class="text-[15px] text-ink"></p>
+        </div>
+      </form>
+    </div>
+  </section>
+
 </main>
 
-<footer>
-  <div class="wrap">
-    <span>© Planeta Ladariya · Матвей Харитонов · с. Месягутово, Дуванский район, Республика Башкортостан</span>
-    <a href="tel:+79177464295">+7 917 746-42-95</a>
-    <a href="mailto:zames.78@mail.ru">zames.78@mail.ru</a>
-    <a href="blog/index.html">Блог</a>
+<footer class="border-t border-line bg-surface">
+  <div class="mx-auto flex max-w-6xl flex-col gap-4 px-5 py-8 text-[15px] text-muted sm:px-8 md:flex-row md:items-center md:justify-between">
+    <p>© Planeta Ladariya, Матвей Харитонов, с. Месягутово</p>
+    <p class="flex flex-wrap gap-x-6 gap-y-1">
+      <a class="hover:text-ink" href="tel:+79177464295">+7 917 746-42-95</a>
+      <a class="hover:text-ink" href="mailto:zames.78@mail.ru">zames.78@mail.ru</a>
+      <a class="hover:text-ink" href="blog/index.html">Блог</a>
+    </p>
   </div>
 </footer>
+
 <script>
-(function(){
-  var WEEKS=50, FTE=1700;
-  var $=function(id){return document.getElementById(id);};
-  var presets={services:{salary:70000,hours:3},trade:{salary:55000,hours:2},agro:{salary:50000,hours:1.5}};
-  var fmt=function(n){return Math.round(n).toLocaleString('ru-RU');};
-  var summary='';
-  function num(id){var v=parseFloat($(id).value);return isNaN(v)?0:v;}
-  function calc(){
-    var emp=num('emp'), salary=num('salary'), hours=num('hours'), oh=num('overhead'), cost=num('cost');
-    $('emp-out').textContent=emp;
-    var hy=emp*hours*WEEKS, fte=hy/FTE;
-    var hourly=salary*12*(1+oh/100)/FTE, save=hy*hourly;
-    $('r-hours').textContent=fmt(hy)+' ч';
-    $('r-fte').textContent=(Math.round(fte*10)/10).toLocaleString('ru-RU')+' ставки';
-    $('r-money').textContent=fmt(save)+' ₽';
-    var pb='Укажите стоимость внедрения';
-    if(cost>0 && save>0){pb=(Math.round(cost/(save/12)*10)/10).toLocaleString('ru-RU')+' мес.';} else if(cost>0){pb='не окупается при этих допущениях';}
-    $('r-payback').textContent=pb;
-    var half=save/2, halfText=fmt(half)+' ₽ в год';
-    if(cost>0 && half>0){halfText+=', окупаемость '+(Math.round(cost/(half/12)*10)/10).toLocaleString('ru-RU')+' мес.';}
-    $('r-half').textContent=halfText;
-    summary='Сотрудников: '+emp+'; зарплата: '+fmt(salary)+' ₽; экономия: '+hours+' ч в неделю; надбавка: '+oh+'%. Итог: '+fmt(hy)+' ч в год, '+(Math.round(fte*10)/10)+' ставки, '+fmt(save)+' ₽ в год'+(cost>0?'; стоимость внедрения: '+fmt(cost)+' ₽':'')+'.';
-    $('lead-link').href='contact.html?topic=razbor&calc='+encodeURIComponent(summary);
+  (function () {
+    var btn = document.getElementById('menu-btn');
+    var nav = document.getElementById('mobile-nav');
+    if (!btn || !nav) return;
+    btn.addEventListener('click', function () {
+      var open = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', String(!open));
+      nav.classList.toggle('hidden');
+    });
+  })();
+</script>
+<script>
+(function () {
+  'use strict';
+
+  /*CORE-START*/
+  var FTE_HOURS = 1700;   // часов в году на одну полную ставку
+  var MAX_AUTO = 60;      // верхняя граница доли времени на роль, %
+  var HORIZON = 60;       // горизонт расчёта окупаемости, месяцев
+
+  function clamp(v, min, max) {
+    v = Number(v);
+    if (!isFinite(v)) { v = min; }
+    return Math.min(max, Math.max(min, v));
   }
-  function set(id,v){$(id).value=v;}
-  $('sphere').addEventListener('change',function(){var p=presets[this.value];set('salary',p.salary);set('hours',p.hours);set('overhead',30);calc();});
-  $('preset-careful').addEventListener('click',function(){set('hours',2);calc();});
-  $('preset-optimistic').addEventListener('click',function(){set('hours',6);set('salary',90000);set('overhead',42);calc();});
-  ['emp','salary','hours','overhead','cost'].forEach(function(id){$(id).addEventListener('input',calc);});
-  calc();
+
+  // Распределение численности по ролям методом наибольших остатков: сумма всегда равна total.
+  function allocate(total, shares) {
+    var raw = shares.map(function (s) { return s * total; });
+    var base = raw.map(function (r) { return Math.floor(r); });
+    var left = total - base.reduce(function (a, b) { return a + b; }, 0);
+    var order = raw.map(function (r, i) { return { i: i, rem: r - Math.floor(r) }; })
+      .sort(function (a, b) { return (b.rem - a.rem) || (a.i - b.i); });
+    for (var k = 0; k < left; k++) { base[order[k].i] += 1; }
+    return base;
+  }
+
+  // Экономия при полном эффекте: ФОТ роли × доля времени × глубина внедрения.
+  function compute(p) {
+    var oh = 1 + p.overhead / 100;
+    var rows = [], fund = 0, saving = 0, hours = 0;
+    p.roles.forEach(function (r) {
+      var eff = Math.min(MAX_AUTO, r.auto * p.depth) / 100;
+      var f = r.hc * r.salary * 12 * oh;
+      var s = f * eff;
+      var h = r.hc * FTE_HOURS * eff;
+      rows.push({ fund: f, saving: s, hours: h });
+      fund += f; saving += s; hours += h;
+    });
+    return { rows: rows, fund: fund, saving: saving, hours: hours, fte: hours / FTE_HOURS };
+  }
+
+  // Помесячная проекция: в первый год действует коэффициент раскачки, затраты вычитаются.
+  function project(saving, p) {
+    var setup = p.useCosts ? p.setup : 0;
+    var support = p.useCosts ? p.support : 0;
+    var ramp = p.ramp / 100;
+    var cum = -setup, payback = null, net1 = null, net3 = null;
+    for (var m = 1; m <= HORIZON; m++) {
+      var gross = (m <= 12 ? saving * ramp : saving) / 12;
+      cum += gross - support;
+      if (m === 12) { net1 = cum; }
+      if (m === 36) { net3 = cum; }
+      if (payback === null && cum >= 0) { payback = m; }
+    }
+    return { net1: net1, net3: net3, payback: payback, hasCost: (setup > 0 || support > 0) };
+  }
+  /*CORE-END*/
+
+  var SECTORS = {
+    admin: {
+      label: 'Администрация, МУП, ЖКХ', hint: 'Районы, поселения, муниципальные предприятия',
+      setup: 150000, support: 30000,
+      roles: [
+        { name: 'Специалист по обращениям граждан', share: 0.15, salary: 40000, auto: 25 },
+        { name: 'Делопроизводитель, секретарь', share: 0.15, salary: 38000, auto: 15 },
+        { name: 'Бухгалтер, экономист', share: 0.15, salary: 50000, auto: 8 },
+        { name: 'Юрист, юрисконсульт', share: 0.08, salary: 55000, auto: 8 },
+        { name: 'Диспетчер, оператор заявок', share: 0.12, salary: 38000, auto: 15 },
+        { name: 'Руководители и профильные специалисты', share: 0.35, salary: 55000, auto: 3 }
+      ]
+    },
+    school: {
+      label: 'Школа, колледж, учреждение', hint: 'Образование, культура, медицина',
+      setup: 150000, support: 30000,
+      roles: [
+        { name: 'Секретарь-делопроизводитель', share: 0.06, salary: 35000, auto: 20 },
+        { name: 'Педагоги и классные руководители', share: 0.60, salary: 45000, auto: 2 },
+        { name: 'Заместители директора, методисты', share: 0.10, salary: 55000, auto: 6 },
+        { name: 'Бухгалтер, завхоз', share: 0.08, salary: 42000, auto: 8 },
+        { name: 'Прочий персонал', share: 0.16, salary: 30000, auto: 1 }
+      ]
+    },
+    trade: {
+      label: 'Торговля', hint: 'Магазины, опт, интернет-торговля',
+      setup: 0, support: 0,
+      roles: [
+        { name: 'Менеджеры по продажам', share: 0.30, salary: 55000, auto: 12 },
+        { name: 'Консультанты, продавцы', share: 0.40, salary: 40000, auto: 6 },
+        { name: 'Администраторы, операторы заказов', share: 0.10, salary: 45000, auto: 20 },
+        { name: 'Бухгалтер', share: 0.05, salary: 55000, auto: 8 },
+        { name: 'Склад и логистика', share: 0.15, salary: 42000, auto: 3 }
+      ]
+    },
+    services: {
+      label: 'Услуги и сервис', hint: 'Клиники, салоны, мастерские, консалтинг',
+      setup: 0, support: 0,
+      roles: [
+        { name: 'Администраторы, ресепшен', share: 0.20, salary: 40000, auto: 25 },
+        { name: 'Специалисты-исполнители', share: 0.50, salary: 60000, auto: 3 },
+        { name: 'Менеджеры по работе с клиентами', share: 0.15, salary: 50000, auto: 15 },
+        { name: 'Бухгалтер, офис-менеджер', share: 0.10, salary: 48000, auto: 10 },
+        { name: 'Руководители', share: 0.05, salary: 90000, auto: 4 }
+      ]
+    },
+    agro: {
+      label: 'АПК', hint: 'Сельхозпредприятия, переработка',
+      setup: 0, support: 0,
+      roles: [
+        { name: 'Бухгалтер, экономист', share: 0.08, salary: 50000, auto: 8 },
+        { name: 'Агрономы, зоотехники, инженеры', share: 0.12, salary: 60000, auto: 3 },
+        { name: 'Механизаторы и рабочие', share: 0.55, salary: 45000, auto: 1 },
+        { name: 'Диспетчер, логист', share: 0.07, salary: 45000, auto: 12 },
+        { name: 'Делопроизводитель, кадры', share: 0.06, salary: 38000, auto: 15 },
+        { name: 'Руководители', share: 0.12, salary: 80000, auto: 3 }
+      ]
+    }
+  };
+
+  var $ = function (id) { return document.getElementById(id); };
+  var nf = new Intl.NumberFormat('ru-RU');
+  var state = { sector: 'admin', employees: 50, depth: 1, overhead: 30, ramp: 50, setup: 150000, support: 30000, useCosts: true, roles: [] };
+  var refs = [];
+
+  function money(n) {
+    var a = Math.abs(n), sign = n < 0 ? '−' : '';
+    if (a >= 1e6) { return sign + (a / 1e6).toLocaleString('ru-RU', { maximumFractionDigits: 2, minimumFractionDigits: 2 }) + ' млн ₽'; }
+    return sign + nf.format(Math.round(a)) + ' ₽';
+  }
+  function months(m) { return m === null ? 'не окупается за 5 лет' : m + ' мес.'; }
+
+  function numVal(id, min, max, fallback) {
+    var raw = $(id).value.replace(',', '.');
+    if (raw === '') { return fallback; }
+    return clamp(parseFloat(raw), min, max);
+  }
+
+  function loadSector(key) {
+    var s = SECTORS[key];
+    state.sector = key;
+    state.setup = s.setup;
+    state.support = s.support;
+    state.useCosts = (s.setup > 0 || s.support > 0);
+    state.roles = s.roles.map(function (r) { return { name: r.name, share: r.share, salary: r.salary, auto: r.auto }; });
+    $('setup').value = s.setup || '';
+    $('support').value = s.support || '';
+    $('use-costs').checked = state.useCosts;
+    $('cost-note').textContent = (s.setup > 0)
+      ? 'Подставлены наши условия пилота: 150 000 ₽ разово и 30 000 ₽ в месяц за сопровождение.'
+      : 'Для бизнеса стоимость зависит от сценария. Введите свою цифру или оставьте поля пустыми: тогда окупаемость не считается.';
+    renderRoles();
+  }
+
+  function renderRoles() {
+    var body = $('roles-body');
+    body.innerHTML = '';
+    refs = [];
+    state.roles.forEach(function (r, i) {
+      var tr = document.createElement('tr');
+      tr.className = 'border-t border-line';
+
+      var tdName = document.createElement('td');
+      tdName.className = 'py-3 pr-3 text-ink';
+      tdName.textContent = r.name;
+
+      var tdHc = document.createElement('td');
+      tdHc.className = 'px-3 py-3 text-right tabular-nums';
+
+      var tdSal = document.createElement('td');
+      tdSal.className = 'px-3 py-2';
+      var inSal = document.createElement('input');
+      inSal.type = 'number'; inSal.min = '10000'; inSal.step = '1000'; inSal.value = r.salary;
+      inSal.className = 'w-28 rounded-md border border-slate-300 px-2 py-1.5 text-right tabular-nums';
+      inSal.setAttribute('aria-label', 'Зарплата: ' + r.name);
+      inSal.addEventListener('input', function () {
+        var v = parseFloat(inSal.value.replace(',', '.'));
+        state.roles[i].salary = isFinite(v) && v >= 0 ? v : 0;
+        update();
+      });
+      tdSal.appendChild(inSal);
+
+      var tdAuto = document.createElement('td');
+      tdAuto.className = 'px-3 py-2';
+      var inAuto = document.createElement('input');
+      inAuto.type = 'number'; inAuto.min = '0'; inAuto.max = String(MAX_AUTO); inAuto.step = '1'; inAuto.value = r.auto;
+      inAuto.className = 'w-20 rounded-md border border-slate-300 px-2 py-1.5 text-right tabular-nums';
+      inAuto.setAttribute('aria-label', 'Доля времени, которую берёт ассистент: ' + r.name);
+      inAuto.addEventListener('input', function () {
+        var v = parseFloat(inAuto.value.replace(',', '.'));
+        state.roles[i].auto = isFinite(v) ? clamp(v, 0, MAX_AUTO) : 0;
+        update();
+      });
+      tdAuto.appendChild(inAuto);
+
+      var tdSave = document.createElement('td');
+      tdSave.className = 'py-3 pl-3 text-right font-semibold tabular-nums text-ink';
+
+      tr.appendChild(tdName); tr.appendChild(tdHc); tr.appendChild(tdSal); tr.appendChild(tdAuto); tr.appendChild(tdSave);
+      body.appendChild(tr);
+      refs.push({ tr: tr, hc: tdHc, save: tdSave });
+    });
+    update();
+  }
+
+  function readParams() {
+    state.overhead = numVal('overhead', 0, 100, 30);
+    state.ramp = numVal('ramp', 10, 100, 50);
+    state.setup = numVal('setup', 0, 1e9, 0);
+    state.support = numVal('support', 0, 1e8, 0);
+    state.useCosts = $('use-costs').checked;
+    var d = document.querySelector('input[name="depth"]:checked');
+    state.depth = d ? parseFloat(d.value) : 1;
+  }
+
+  var last = null;
+
+  function update() {
+    readParams();
+    var counts = allocate(state.employees, state.roles.map(function (r) { return r.share; }));
+    var p = {
+      roles: state.roles.map(function (r, i) { return { hc: counts[i], salary: r.salary, auto: r.auto }; }),
+      depth: state.depth, overhead: state.overhead, ramp: state.ramp,
+      setup: state.setup, support: state.support, useCosts: state.useCosts
+    };
+    var res = compute(p);
+    var proj = project(res.saving, p);
+    var half = project(res.saving / 2, p);
+
+    refs.forEach(function (ref, i) {
+      ref.hc.textContent = counts[i];
+      ref.save.textContent = money(res.rows[i].saving);
+      ref.tr.hidden = counts[i] === 0;
+    });
+
+    $('r-saving').textContent = money(res.saving);
+    $('r-fund').textContent = money(res.fund);
+    $('r-hours').textContent = nf.format(Math.round(res.hours)) + ' ч';
+    $('r-fte').textContent = (Math.round(res.fte * 10) / 10).toLocaleString('ru-RU') + ' ставки';
+    var costNote = proj.hasCost ? '' : ' (без учёта затрат)';
+    $('r-net1').textContent = money(proj.net1) + costNote;
+    $('r-net3').textContent = money(proj.net3) + costNote;
+    $('r-payback').textContent = proj.hasCost ? months(proj.payback) : 'укажите затраты';
+    $('r-half').textContent = 'Если эффект окажется вдвое меньше: ' + money(half.net1) + ' за первый год' +
+      (proj.hasCost ? ', окупаемость ' + (half.payback === null ? 'дольше 5 лет' : half.payback + ' мес.') : '') + '.';
+    $('r-employees').textContent = state.employees;
+
+    last = { res: res, proj: proj };
+    $('calc-summary').value = buildSummary();
+  }
+
+  function buildSummary() {
+    if (!last) { return ''; }
+    var s = SECTORS[state.sector];
+    return 'Сфера: ' + s.label + '; сотрудников: ' + state.employees + '; глубина внедрения: ×' + state.depth +
+      '; надбавка: ' + state.overhead + '%; эффект первого года: ' + state.ramp + '%. ' +
+      'Итог: ' + nf.format(Math.round(last.res.hours)) + ' ч в год, ' + (Math.round(last.res.fte * 10) / 10) + ' ставки, ' +
+      money(last.res.saving) + ' в год при полном эффекте' +
+      (last.proj.hasCost ? '; окупаемость: ' + months(last.proj.payback) : '') + '.';
+  }
+
+  // Ползунок и числовое поле синхронизированы в обе стороны.
+  var slider = $('emp'), box = $('emp-box');
+  function setEmployees(v, fromBox) {
+    var n = Math.round(clamp(v, 1, 5000));
+    state.employees = n;
+    slider.value = Math.min(n, parseInt(slider.max, 10));
+    if (!fromBox) { box.value = n; }
+    update();
+  }
+  slider.addEventListener('input', function () { setEmployees(slider.value, false); });
+  box.addEventListener('input', function () {
+    if (box.value.trim() === '') { return; }
+    var v = parseInt(box.value, 10);
+    if (isFinite(v)) { setEmployees(v, true); }
+  });
+  box.addEventListener('change', function () { box.value = state.employees; });
+  box.addEventListener('blur', function () { box.value = state.employees; });
+
+  ['overhead', 'ramp', 'setup', 'support', 'use-costs'].forEach(function (id) {
+    $(id).addEventListener('input', update);
+    $(id).addEventListener('change', update);
+  });
+  Array.prototype.forEach.call(document.querySelectorAll('input[name="depth"]'), function (r) {
+    r.addEventListener('change', update);
+  });
+  Array.prototype.forEach.call(document.querySelectorAll('input[name="sector"]'), function (r) {
+    r.addEventListener('change', function () { loadSector(r.value); });
+  });
+  $('reset-roles').addEventListener('click', function () { loadSector(state.sector); });
+
+  // Отправка заявки без перехода на другую страницу.
+  var form = $('lead-form'), status = $('lead-status'), btn = $('lead-btn');
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    if (!form.reportValidity()) { return; }
+    $('calc-summary').value = buildSummary();
+    btn.disabled = true;
+    status.textContent = 'Отправляем заявку…';
+    fetch(form.action, { method: 'POST', body: new FormData(form), headers: { 'Accept': 'application/json' } })
+      .then(function (r) {
+        if (!r.ok) { throw new Error('http ' + r.status); }
+        form.reset();
+        status.textContent = 'Заявка отправлена. Мы свяжемся с вами, чтобы согласовать время разбора.';
+      })
+      .catch(function () {
+        status.textContent = 'Не удалось отправить заявку. Позвоните по номеру +7 917 746-42-95 или напишите на zames.78@mail.ru.';
+      })
+      .then(function () { btn.disabled = false; });
+  });
+
+  loadSector('admin');
 })();
 </script>
 </body>
