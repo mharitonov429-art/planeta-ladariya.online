@@ -1,0 +1,58 @@
+{
+  "specVersion": "1.0",
+  "host": {
+    "displayName": "Planeta Ladariya — ИТ-центр суверенных ИИ-систем северо-востока Башкортостана",
+    "identifier": "planeta-ladariya.online"
+  },
+  "entries": [
+    {
+      "identifier": "urn:ai:planeta-ladariya.online:knowledge:llms-txt",
+      "displayName": "Индекс сайта для нейросетей (llms.txt)",
+      "type": "text/plain",
+      "url": "https://planeta-ladariya.online",
+      "description": "Краткое описание ИТ-центра и список ключевых разделов: решения для B2G по ФЗ-243, AI-студия для B2B, калькулятор окупаемости."
+    },
+    {
+      "identifier": "urn:ai:planeta-ladariya.online:knowledge:sitemap",
+      "displayName": "Карта сайта (sitemap.xml)",
+      "type": "application/xml",
+      "url": "https://planeta-ladariya.online",
+      "description": "Полный список индексируемых страниц портала на русском языке."
+    },
+    {
+      "identifier": "urn:ai:planeta-ladariya.online:knowledge:b2g-government",
+      "displayName": "Суверенный ИИ для администраций и муниципальных органов",
+      "type": "text/html",
+      "url": "https://planeta-ladariya.online",
+      "description": "Локальные ИИ-справочники для администраций районов и сельских поселений. Автоматизация 40% обращений граждан вне облачных платформ согласно ФЗ-243."
+    },
+    {
+      "identifier": "urn:ai:planeta-ladariya.online:knowledge:b2b-studio",
+      "displayName": "AI-студия автоматизации бизнес-процессов Genivai",
+      "type": "text/html",
+      "url": "https://planeta-ladariya.online",
+      "description": "Каталог автономных ИИ-агентов, RAG-систем обучения кадров и умных секретарей для снижения операционных затрат коммерческих компаний."
+    },
+    {
+      "identifier": "urn:ai:planeta-ladariya.online:knowledge:calculator",
+      "displayName": "Интерактивный калькулятор экономики искусственного интеллекта",
+      "type": "text/html",
+      "url": "https://planeta-ladariya.online",
+      "description": "Математическая модель расчета окупаемости ИИ-ассистентов по отраслям. Динамическая оценка высвобождения ФОТ и рабочих часов в год."
+    },
+    {
+      "identifier": "urn:ai:planeta-ladariya.online:knowledge:blog",
+      "displayName": "Блог «Локальный ИИ и роботы простыми словами»",
+      "type": "text/html",
+      "url": "https://planeta-ladariya.online",
+      "description": "База практических знаний по информационной безопасности, локальным серверам, RAG-технологиям и нормативным актам (ФЗ-243, ФЗ-152)."
+    },
+    {
+      "identifier": "urn:ai:planeta-ladariya.online:knowledge:contact",
+      "displayName": "Контакты и формы захвата заявок на аудит",
+      "type": "text/html",
+      "url": "https://planeta-ladariya.online",
+      "description": "Адрес офиса ИТ-центра в с. Месягутово, прямые контакты Матвея Харитонова и форма бронирования 45-минутных сессий разбора процессов."
+    }
+  ]
+}
