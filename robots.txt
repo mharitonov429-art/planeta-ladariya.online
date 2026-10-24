@@ -1,5 +1,0 @@
-User-agent: *
-Allow: /
-Disallow: /blog/_article-template.html
-
-Sitemap: https://planeta-ladariya.online/sitemap.xml
